@@ -1,0 +1,151 @@
+.divrooth {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.immg {
+  margin-top: 5px;
+  width: 30px;
+  height: 10px;
+}
+
+.img {
+  width: 30px;
+  padding-top: 5px;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 2rem;
+  width: auto;
+  background-color: #eefca9;
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 992px) {
+  .rounded-lg-3 {
+    border-radius: .3rem;
+  }
+}
+
+.overflow-hidden {
+  max-height: 45vh;
+}
+
+.slideshow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+
+.btnbtn-dark {
+  background-color: #b7e576;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  content: icon;
+  text-decoration: none;
+  display: inline-block;
+  width: 50;
+  height: 45px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 50px;
+  margin-right: 60px;
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.card-img-top {
+  display: flow-root;
+  width: 310px;
+  height: 250px;
+  object-fit: cover;
+  align-items: normal;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  margin: 7px;
+}
+
+.containerH {
+  width: 90%;
+}
+
+.form-group {
+  width: 70%;
+}
+
+.navbar {
+  background-color: #83cc61;
+}
+
+.btnSub {
+  background-color: #b7e576;
+  border-radius: 10px;
+  border: none;
+
+}
+
+.btn {
+  color: #000;
+}
+
+.divlogo {
+  font-size: 10px;
+  font: bold;
+}
+
+.h {
+  font-size: 25px;
+  font: bold;
+}
+
+.cardbtn {
+  background-color: #b7e576;
+  border: none;
+  color: black;
+  border-radius: 20px;
+  width: 40px;
+  height: 35px;
+}

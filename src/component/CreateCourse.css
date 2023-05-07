@@ -1,0 +1,71 @@
+.divrootup {
+    background-image: url(./2870157.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.child1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 350px;
+    width: 50%;
+    height: auto;
+}
+
+.col-auto {
+    margin-top: 15px;
+    width: 34%;
+    height: 60%;
+    margin-left: 48px;
+    padding-bottom: 5px;
+}
+
+.container {
+    height: 70vh;
+    margin-top: 100px;
+    background-color: white;
+}
+
+.button6 {
+    margin-top: 20px;
+    margin-left: 230px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    cursor: pointer;
+    width: 22%;
+    height: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    background-color: #b7e576;
+    border: none;
+    color: black;
+}
+
+.button6:hover {
+    color: black
+}
+
+.h2 {
+    padding-top: 18px;
+    margin-left: 230px;
+    margin-bottom: 25px;
+}
+
+.nav-item2 {
+    margin-left: 950px;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}

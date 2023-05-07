@@ -1,0 +1,44 @@
+.divrootAdP {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+.containerAdP{
+    margin-top: 60px;
+}
+.photo2 {
+    width: 550px;
+    height: 550px;
+}
+
+.a3lan2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hr2 {
+    color: black;
+    size: 10px;
+    padding-top: 2px;
+}
+
+.p2 {
+    margin-top: px;
+    padding-top: 35px;
+    margin-bottom: 0px;
+}
+.Add2{
+    width: 55px;
+    height: 55px;
+margin-top: 12px;
+margin-left: 20px;
+}
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}

@@ -1,0 +1,50 @@
+.divrootEd {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 94vh;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container11 {
+  height: auto;
+  background-size: cover;
+  width: 100%;
+  margin-top: 56px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.design {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  padding-top: 20px;
+}
+
+.design label {
+  width: 200px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.design select {
+  width: 200px;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.design button {
+  margin-bottom: 22px;
+  background-color: #b7e576;
+  color: black;
+  width: 80px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+}
+
+.ll {
+  border-radius: 20px;
+  width: 20px;
+  height: 30px;
+}

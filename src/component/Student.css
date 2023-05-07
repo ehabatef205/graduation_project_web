@@ -1,0 +1,97 @@
+.divrootSt {
+    background-repeat: repeat;
+    height: 100vh;
+    display: block;
+    background-size: cover;
+    background-image: url(./2870157.jpg);
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0px;
+}
+
+.update {
+    background-color: #b7e576;
+    border: none;
+    color: black;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    cursor: pointer;
+    width: 30%;
+    height: 0%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.update:hover {
+    color: black
+}
+
+.nav-item2 {
+    margin-left: 200px;
+}
+
+.card-text {
+    text-align: center;
+    margin-right: 0px;
+}
+
+.card-img-top2 {
+    position: relative;
+    clip-path: circle(50%);
+    width: 100px;
+}
+
+.photo {
+    width: 340px;
+    height: 340px;
+}
+
+.a3lan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hr {
+    color: black;
+    size: 10px;
+    padding-top: 2px;
+}
+
+.p1 {
+    margin-top: px;
+    padding-top: 35px;
+    margin-bottom: 0px;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar {
+    background-color: #83cc61;
+}
+
+.col-p-3-bg-light {
+    position: absolute;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 7px 7px #83cc61;
+    margin-top: 100px;
+}
+
+.col-p-5-bg-light {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
