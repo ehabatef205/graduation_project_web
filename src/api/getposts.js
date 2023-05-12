@@ -1,9 +1,6 @@
 import axios from "./axios";
 const user=JSON.parse(localStorage.getItem('data'))
 
-const getallposts = async(id,password)=>{
-    let posts=(await axios.get("posts/view_all_post"))
-}
 const createpost=async(text,image,department,course_id)=>{
     await axios.post('/posts/create_post',{
         text:"testpost",
@@ -18,4 +15,4 @@ const createpost=async(text,image,department,course_id)=>{
 }
 
 
-export default {getallposts,createpost}
+export default {createpost}

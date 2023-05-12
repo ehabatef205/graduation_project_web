@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../component/ViewStudent.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import Studentlist from "../lists/studentlist";
 const ViewStudent = () => {
   return (
     <div className="divrootVS">
@@ -74,118 +76,7 @@ const ViewStudent = () => {
               <th scope="col">View</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row"> 1927109 </th>
-              <td>Ziad Mohammed Ezzat</td>
-              <td>2.01</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">1927109 </th>
-              <td>Ziad Mohammed Ezzat</td>
-              <td>2.01</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">1927109 </th>
-              <td>Ziad Mohammed Ezzat</td>
-              <td>2.01</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">1927109 </th>
-              <td>Ziad Mohammed Ezzat</td>
-              <td>2.01</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"> 1927109 </th>
-              <td>Ziad Mohammed Ezzat</td>
-              <td>2.01</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"> 1927109</th>
-              <td>Ziad Mohammed Ezzat</td>
-              <td>2.01</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"> 1927204 </th>
-              <td>Rahma Sabry Ahmed</td>
-              <td>2.1</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"> 1927204</th>
-              <td>Rahma Sabry Ahmed</td>
-              <td>2.1</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">1927204</th>
-              <td>Rahma Sabry Ahmed</td>
-              <td>2.1</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"> 1927204</th>
-              <td>Rahma Sabry Ahmed</td>
-              <td>2.1</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"> 1927204</th>
-              <td>Rahma Sabry Ahmed</td>
-              <td>2.1</td>
-              <td>
-                <a href="/Update">
-                  <img className="imgview" src="../images/eye1.png" alt="" />
-                </a>
-              </td>
-            </tr>
-          </tbody>
+          <Studentlist></Studentlist>
         </table>
         <br></br>
       </div>

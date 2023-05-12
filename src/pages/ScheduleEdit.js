@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../component/ScheduleEdit.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import axios from "../api/axios";
+
 const ScheduleEdit = () => {
   const [courseName, selectedCourse] = useState("");
   const [courseType, selectedType] = useState("");
@@ -18,6 +21,11 @@ const ScheduleEdit = () => {
       };
       setCourseData([...courseData, newData]);
     }
+    axios.post('/registration/',{group:'6449a7c4b74537645565670a'},{Headers:{'authorization': `Bearer ${localStorage.token}`}})
+    .then(async (res) => {
+      console.log("done")
+  })
+  .catch(error => console.log(error))
   };
   return (
     <div className="divrootEd">

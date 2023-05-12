@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import "../component/AddPost.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import createpost from "../api/getposts"
 const AddPost = () => {
+  const navigate = useNavigate()
   const onSubmit = async()=>{
+    
     await createpost("testpost",
     "",
     "admin",
-    "admin",)
+    "admin",).then(()=>{
+        navigate("/AddPost")
+    })
   }
   return (
     <div className="divrootAdd">

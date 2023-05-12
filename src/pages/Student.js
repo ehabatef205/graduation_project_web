@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-import React, { useState  , useEffect } from 'react';
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../component/Student.css";
-import posts from "../api/getposts";
+import Postlist from "../lists/posts";
 
 const Student = () => {
-
+  
   const student_id= JSON.parse(localStorage.getItem('data')).student_id
   const name= JSON.parse(localStorage.getItem('data')).name
   const department=JSON.parse(localStorage.getItem('data')).department
   const image=JSON.parse(localStorage.getItem('data')).image
   
-  console.log(posts.getallposts())
+
 
 
 
@@ -135,92 +135,24 @@ const Student = () => {
           </Link>
         </form>
       </div>
-      <div>
-        <div>
-          <div
-            style={{
-              width: "800px",
-              backgroundColor: "white",
-              height: "700px",
-            }}
-            className="col-p-5-bg-light"
-          >
-            <ul
-              class="nav justify-content-center"
-              style={{ backgroundColor: "#83cc61" }}
-            >
-              <li class="nav-item">
-                <h1>Advertisements</h1>
-              </li>
-            </ul>
-
-            <div className="a3lan">
-              <img
-                className="photo"
-                src="../images/اعلان.jpg"
-                alt="advertisement"
-              />
-              <p className="p1">
-                Published on <span class="date">March 25, 2023</span> by{" "}
-                <span class="author">John Doe</span>{" "}
-                <span class="ad-number">Ad #12345</span>
-              </p>
-            </div>
-            <hr className="hr"></hr>
-            <div className="a3lan">
-              <img
-                className="photo"
-                src="../images/اعلان2.jpg"
-                alt="advertisement"
-              />
-              <p className="p1">
-                Published on <span class="date">March 25, 2023</span> by{" "}
-                <span class="author">John Doe</span>{" "}
-                <span class="ad-number">Ad #12345</span>
-              </p>
-            </div>
-            <hr className="hr"></hr>
-            <div className="a3lan">
-              <img
-                className="photo"
-                src="../images/اعلان.jpg"
-                alt="advertisement"
-              />
-              <p className="p1">
-                Published on <span class="date">March 25, 2023</span> by{" "}
-                <span class="author">John Doe</span>{" "}
-                <span class="ad-number">Ad #12345</span>
-              </p>
-            </div>
-            <hr className="hr"></hr>
-            <div className="a3lan">
-              <img
-                className="photo"
-                src="../images/اعلان2.jpg"
-                alt="advertisement"
-              />
-              <p className="p1">
-                Published on <span class="date">March 25, 2023</span> by{" "}
-                <span class="author">John Doe</span>{" "}
-                <span class="ad-number">Ad #12345</span>
-              </p>
-            </div>
-            <hr className="hr"></hr>
-            <div className="a3lan">
-              <img
-                className="photo"
-                src="../images/758.jpg"
-                alt="advertisement"
-              />
-              <p className="p1">
-                Published on <span class="date">March 25, 2023</span> by{" "}
-                <span class="author">John Doe</span>{" "}
-                <span class="ad-number">Ad #12345</span>
-              </p>
-            </div>
-          </div>
+      <div
+      style={{
+        width: "800px",
+        backgroundColor: "white",
+        height: "700px",
+      }}
+      className="col-p-5-bg-light"
+    >
+      <div  
+        class="nav justify-content-center"
+        style={{ backgroundColor: "#83cc61" }}
+      >
+        <div class="nav-item">
+          <h1>Advertisements</h1>
         </div>
       </div>
+     <Postlist></Postlist>
+     </div>
     </div>
   );
 };

@@ -2,23 +2,14 @@ import { Link } from "react-router-dom";
 import React , {useState , useEffect}from 'react';
 import "../component/AdminPage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import posts from "../api/getposts";
+
+import Postlist from "../lists/posts";
 
 
 
 
 const AdminPage = () => {
-  let postsexist=false
-
-  const [post , setpost] = useState({})
-
-    useEffect(() => {
-        const getpost = async ()=>{
-            setpost(await posts.getallposts())
-        }
-        getpost()
-        
-    }, [post]);
+  
 
 
   return (
@@ -139,70 +130,7 @@ const AdminPage = () => {
         <h1>Posts</h1>
       </li>
     </ul>
-        <div className="a3lan2">
-          <img
-            className="photo2"
-            src="../images/اعلان2.jpg"
-            alt="advertisement"
-          />
-          <p className="p2">
-            Published on <span class="date">March 25, 2023</span> by{" "}
-            <span class="author">John Doe</span>{" "}
-            <span class="ad-number">Ad #12345</span>
-          </p>
-        </div>
-        <hr className="hr2"></hr>
-        <div className="a3lan2">
-          <img
-            className="photo2"
-            src="../images/اعلان2.jpg"
-            alt="advertisement"
-          />
-          <p className="p2">
-            Published on <span class="date">March 25, 2023</span> by{" "}
-            <span class="author">John Doe</span>{" "}
-            <span class="ad-number">Ad #12345</span>
-          </p>
-        </div>
-        <hr className="hr2"></hr>
-        <div className="a3lan2">
-          <img
-            className="photo2"
-            src="../images/اعلان.jpg"
-            alt="advertisement"
-          />
-          <p className="p2">
-            Published on <span class="date">March 25, 2023</span> by{" "}
-            <span class="author">John Doe</span>{" "}
-            <span class="ad-number">Ad #12345</span>
-          </p>
-        </div>
-        <hr className="hr2"></hr>
-        <div className="a3lan2">
-          <img
-            className="photo2"
-            src="../images/اعلان2.jpg"
-            alt="advertisement"
-          />
-          <p className="p2">
-            Published on <span class="date">March 25, 2023</span> by{" "}
-            <span class="author">John Doe</span>{" "}
-            <span class="ad-number">Ad #12345</span>
-          </p>
-        </div>
-        <hr className="hr2"></hr>
-        <div className="a3lan2">
-          <img
-            className="photo2"
-            src="../images/758.jpg"
-            alt="advertisement"
-          />
-          <p className="p2">
-            Published on <span class="date">March 25, 2023</span> by{" "}
-            <span class="author">John Doe</span>{" "}
-            <span class="ad-number">Ad #12345</span>
-          </p>
-        </div>
+    <Postlist></Postlist>
       </div>
     </div>
   );

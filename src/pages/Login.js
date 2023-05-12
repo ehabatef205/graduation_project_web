@@ -17,15 +17,13 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(id,password)
+
     await login(id, password).then(async (res)=>{
       if(res.data.token){
         localStorage.setItem('Authorization', 'Bearer ' + res.data.token)
         localStorage.setItem('data',JSON.stringify(res.data.data))
-        console.log(res.data.token)
         let logged=JSON.parse(localStorage.getItem('data'))
         if(logged.user_type==='student'){
-          console.log("student")
             navigate('/Student')
         }else if(logged.user_type==='admin'){
           navigate('/Adminpage')

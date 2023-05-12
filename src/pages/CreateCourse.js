@@ -14,7 +14,7 @@ const CreateCourse = () => {
     reader.addEventListener("load", () => {
       setImageUrl(reader.result);
       setImageSelected(true);
-
+      console.log(imageUrl)
     });
 
     reader.readAsDataURL(file);

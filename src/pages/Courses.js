@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import "../component/Courses.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import CourseList from "../lists/courselist";
+
 const Courses = () => {
   return (
     <div className="divrootc">
@@ -78,119 +81,7 @@ const Courses = () => {
               <th scope="col">Edit</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/9780030846939.OL.0.m.jpg" alt=""  /></th>
-             <th >Math494</th>
-              <td>Selected Topics in Mathematics</td>
-              <td>
-                <a href="/CreateCourse">
-                  <img className="imgedit" src="../images/edit.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/download.jpeg" alt=""  /></th>
-              <th >Comp427</th>
-              <td>Selected Programming Languages </td>
-              <td>
-                <a href="/CreateCourse">
-                  <img className="imgedit" src="../images/edit.png" alt="" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/images.jpeg" alt=""  /></th>
-              <th >Comp407 </th>
-              <td> Programming Languages ​​Design</td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-            <tr>
-             <th scope="row"> <img className="Add" src="../images/download.png" alt=""  /></th>
-              <th >Comp490 </th>
-              <td>Review Article </td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/download (1).jpeg" alt=""  /></th>
-              <th >Comp408 </th>
-              <td>Artificial Intelligence</td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/1000_F_89973923_0lfduzsXEqiKKGN71ruGQ4kdf0dgnQid.jpg" alt=""  /></th>
-              <th >Comp402</th>
-              <td>Cryptography/Cryptology</td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/download (2).jpeg" alt=""  /></th>
-              <th >R212 </th>
-              <td>Linear Algebra and Geometry</td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-            <tr>
-             <th scope="row"> <img className="Add" src="../images/download (1).jpeg" alt=""  /></th>
-              <th > Comp408 </th>
-              <td>Artificial Intelligence</td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/download.jpeg" alt=""  /></th>
-              <th > Comp427 </th>
-              <td>Selected Programming Languages</td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-           
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/1000_F_89973923_0lfduzsXEqiKKGN71ruGQ4kdf0dgnQid.jpg" alt=""  /></th>
-              <th> Comp402 </th>
-              <td>Cryptography/Cryptology </td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-            <tr>
-            <th scope="row"> <img className="Add" src="../images/images.jpeg" alt=""  /></th>
-              <th > Comp407</th>
-              <td>Programming Languages ​​Design </td>
-              <td>
-              <a href="/CreateCourse">
-                <img className="imgedit" src="../images/edit.png" alt="" />
-              </a>
-            </td>
-            </tr>
-          </tbody>
+          <CourseList></CourseList>
         </table>
         <br></br>
       </div>
