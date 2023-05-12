@@ -19,7 +19,7 @@ const CreateCourse = () => {
     reader.readAsDataURL(file);
   }
   return (
-    <div className="divrootup">
+    <div className="divrootcc">
       <div id="root">
         <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
           <div className="container-fluid">
