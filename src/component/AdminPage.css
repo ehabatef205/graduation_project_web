@@ -1,44 +1,46 @@
 .divrootAdP {
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(./2870157.jpg);
     height: auto;
     font-family: 'Times New Roman', Times, serif;
 }
-.containerAdP{
-    margin-top: 60px;
-}
-.photo2 {
-    width: 550px;
-    height: 550px;
+
+.containerAdP {
+    margin-top: 57px;
 }
 
-.a3lan2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hr2 {
-    color: black;
-    size: 10px;
-    padding-top: 2px;
-}
-
-.p2 {
-    margin-top: px;
-    padding-top: 35px;
-    margin-bottom: 0px;
-}
-.Add2{
+.Add2 {
     width: 55px;
     height: 55px;
-margin-top: 12px;
-margin-left: 20px;
+    margin-top: 12px;
+    margin-left: 1700px;
 }
+
 .navbar.fixed-top {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
+}
+
+.divide {
+    margin-bottom: 10px;
+}
+
+.person {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+
+.arrow {
+    height: 47px;
+    width: 47px;
+    margin-left: 20px;
+}
+
+.containerco {
+    border-radius: 15px;
 }

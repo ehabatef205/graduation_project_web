@@ -3,7 +3,6 @@ import { useState } from "react";
 import "../component/CreateCourse.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 const CreateCourse = () => {
- 
   const [imageUrl, setImageUrl] = useState("");
   const [imageSelected, setImageSelected] = useState(false);
 
@@ -14,12 +13,11 @@ const CreateCourse = () => {
     reader.addEventListener("load", () => {
       setImageUrl(reader.result);
       setImageSelected(true);
-      console.log(imageUrl)
+      console.log(imageUrl);
     });
 
     reader.readAsDataURL(file);
   }
-  
   return (
     <div className="divrootup">
       <div id="root">
@@ -48,7 +46,7 @@ const CreateCourse = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/"
                   >
@@ -59,7 +57,7 @@ const CreateCourse = () => {
                 </li>
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/AdminPage"
                   >
@@ -70,7 +68,7 @@ const CreateCourse = () => {
                 </li>
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/Login"
                   >
@@ -89,41 +87,46 @@ const CreateCourse = () => {
           <form>
             <h2 className="h2">Create Course</h2>
             <div class="row g-2 align-items-center mb-3">
-            <div className="col-auto">
-              <div style={{ position: "relative", display: "inline-block" }}>
-              {!imageSelected && (
-              <label htmlFor="image-upload">
-                  <img
-                    src="/images/plus1.png"
-                    alt="Upload "
-                    style={{ cursor: "pointer", width: '70px', height: '70px', marginLeft: "75px"}}
+              <div className="col-auto">
+                <div style={{ position: "relative", display: "inline-block" }}>
+                  {!imageSelected && (
+                    <label htmlFor="image-upload">
+                      <img
+                        src="/images/plus1.png"
+                        alt="Upload "
+                        style={{
+                          cursor: "pointer",
+                          width: "70px",
+                          height: "70px",
+                          marginLeft: "75px",
+                        }}
+                      />
+                    </label>
+                  )}
+                  <input
+                    id="image-upload"
+                    type="file"
+                    onChange={handleImageChange}
+                    style={{ display: "none" }}
                   />
-                </label>
-                )}
-                <input
-                  id="image-upload"
-                  type="file"
-                  onChange={handleImageChange}
-                  style={{ display: "none" }}
-                />
-                {imageUrl && (
-                  <img
-                    src={imageUrl}
-                    alt="Selected "
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      width: '80px',
-                      height: '80px',
-                      marginLeft: "115px"
-                    }}
-                  />
-                )}
+                  {imageUrl && (
+                    <img
+                      src={imageUrl}
+                      alt="Selected "
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: "80px",
+                        height: "80px",
+                        marginLeft: "115px",
+                      }}
+                    />
+                  )}
+                </div>
               </div>
             </div>
-          </div>
             <div class="row g-2 align-items-center mb-3">
               <div className="col-auto">
                 <h5>
@@ -134,16 +137,15 @@ const CreateCourse = () => {
                 </h5>
               </div>
               <div className="col-auto">
-              <input
-                type="text"
-                className="form-control"
-                id="courseId"
-                placeholder="Enter here"
-                name="courseId"
-              />
+                <input
+                  type="text"
+                  className="form-control"
+                  id="courseId"
+                  placeholder="Enter here"
+                  name="courseId"
+                />
+              </div>
             </div>
-            </div>
-
             <div class="row g-2 align-items-center mb-3">
               <div className="col-auto">
                 <h5>
@@ -154,14 +156,14 @@ const CreateCourse = () => {
                 </h5>
               </div>
               <div className="col-auto">
-              <input
-                type="text"
-                className="form-control"
-                id="courseName"
-                placeholder="Enter here"
-                name="courseName"
-              />
-            </div>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="courseName"
+                  placeholder="Enter here"
+                  name="courseName"
+                />
+              </div>
             </div>
             <div class="row g-2 align-items-center mb-3">
               <div className="col-auto">
@@ -173,14 +175,14 @@ const CreateCourse = () => {
                 </h5>
               </div>
               <div className="col-auto">
-              <input
-                type="text"
-                className="form-control"
-                id="courseDescription"
-                placeholder="Enter here"
-                name="courseDescription"
-              />
-            </div>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="courseDescription"
+                  placeholder="Enter here"
+                  name="courseDescription"
+                />
+              </div>
             </div>
             <div class="row g-2 align-items-center mb-3">
               <div className="col-auto">
@@ -192,35 +194,34 @@ const CreateCourse = () => {
                 </h5>
               </div>
               <div className="col-auto">
-              <input
-                type="text"
-                className="form-control"
-                id="courseCredit"
-                placeholder="Enter here"
-                name="courseCredit"
-              />
-            </div>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="courseCredit"
+                  placeholder="Enter here"
+                  name="courseCredit"
+                />
+              </div>
             </div>
             <div class="row g-2 align-items-center mb-3">
-            <div className="col-auto">
-              <h5>
-                {" "}
-                <label htmlFor="department" className="form-label">
-                  Department:
-                </label>
-              </h5>
+              <div className="col-auto">
+                <h5>
+                  {" "}
+                  <label htmlFor="department" className="form-label">
+                    Department:
+                  </label>
+                </h5>
+              </div>
+              <div className="col-auto">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="courseLevel"
+                  placeholder="Enter here"
+                  name="courseLevel"
+                />
+              </div>
             </div>
-            <div className="col-auto">
-            <input
-              type="text"
-              className="form-control"
-              id="courseLevel"
-              placeholder="Enter here"
-              name="courseLevel"
-            />
-          </div>
-          </div>
-
             <button type="submit" className="button6">
               Create
             </button>

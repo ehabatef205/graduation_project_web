@@ -1,19 +1,14 @@
 import { Link } from "react-router-dom";
-import React from 'react';
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../component/Student.css";
 import Postlist from "../lists/posts";
 
 const Student = () => {
-  
-  const student_id= JSON.parse(localStorage.getItem('data')).student_id
-  const name= JSON.parse(localStorage.getItem('data')).name
-  const department=JSON.parse(localStorage.getItem('data')).department
-  const image=JSON.parse(localStorage.getItem('data')).image
-  
-
-
-
+  const student_id = JSON.parse(localStorage.getItem("data")).student_id;
+  const name = JSON.parse(localStorage.getItem("data")).name;
+  const department = JSON.parse(localStorage.getItem("data")).department;
+  const image = JSON.parse(localStorage.getItem("data")).image;
 
   return (
     <div className="divrootSt">
@@ -136,23 +131,23 @@ const Student = () => {
         </form>
       </div>
       <div
-      style={{
-        width: "800px",
-        backgroundColor: "white",
-        height: "700px",
-      }}
-      className="col-p-5-bg-light"
-    >
-      <div  
-        class="nav justify-content-center"
-        style={{ backgroundColor: "#83cc61" }}
+        style={{
+          width: "800px",
+          backgroundColor: "white",
+          height: "700px",
+        }}
+        className="col-p-5-bg-light"
       >
-        <div class="nav-item">
-          <h1>Advertisements</h1>
+        <div
+          class="nav justify-content-center"
+          style={{ backgroundColor: "#83cc61" }}
+        >
+          <div class="nav-item">
+            <h1>Advertisements</h1>
+          </div>
         </div>
+        <Postlist></Postlist>
       </div>
-     <Postlist></Postlist>
-     </div>
     </div>
   );
 };

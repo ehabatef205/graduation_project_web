@@ -1,18 +1,14 @@
-import { Link ,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../component/AddPost.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import createpost from "../api/getposts"
+import createpost from "../api/getposts";
 const AddPost = () => {
-  const navigate = useNavigate()
-  const onSubmit = async()=>{
-    
-    await createpost("testpost",
-    "",
-    "admin",
-    "admin",).then(()=>{
-        navigate("/AddPost")
-    })
-  }
+  const navigate = useNavigate();
+  const onSubmit = async () => {
+    await createpost("testpost", "", "admin", "admin").then(() => {
+      navigate("/AddPost");
+    });
+  };
   return (
     <div className="divrootAdd">
       <div id="root">
@@ -39,7 +35,7 @@ const AddPost = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5 "
                     aria-current="page"
                     to="/"
                   >
@@ -47,18 +43,26 @@ const AddPost = () => {
                       Home
                     </h>
                   </Link>
-                  <Link onClick={onsubmit} className="navbar-brand badge rounded-pill btn  fs-5  active" to="/Student">
-                test create
-              </Link>
                 </li>
-              
+                <li className="nav-item">
+                  <Link
+                    to="/Student"
+                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
+                    onClick={onsubmit}
+                  >
+                    <h className="h" style={{ color: "black" }}>
+                      {" "}
+                      Test Create
+                    </h>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
-      </div>
-      );
-    };
-    
-    export default AddPost;
+    </div>
+  );
+};
+
+export default AddPost;

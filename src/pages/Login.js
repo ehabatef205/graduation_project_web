@@ -1,39 +1,36 @@
-import React, { useState ,Button} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../component/Login.css";
-import login from '../api/login'
+import login from "../api/login";
 const Login = () => {
-
   const [formData, setFormData] = useState({
-    id: '',
-    password: ''
+    id: "",
+    password: "",
   });
 
   const { id, password } = formData;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    await login(id, password).then(async (res)=>{
-      if(res.data.token){
-        localStorage.setItem('Authorization', 'Bearer ' + res.data.token)
-        localStorage.setItem('data',JSON.stringify(res.data.data))
-        let logged=JSON.parse(localStorage.getItem('data'))
-        if(logged.user_type==='student'){
-            navigate('/Student')
-        }else if(logged.user_type==='admin'){
-          navigate('/Adminpage')
+    await login(id, password).then(async (res) => {
+      if (res.data.token) {
+        localStorage.setItem("Authorization", "Bearer " + res.data.token);
+        localStorage.setItem("data", JSON.stringify(res.data.data));
+        let logged = JSON.parse(localStorage.getItem("data"));
+        if (logged.user_type === "student") {
+          navigate("/Student");
+        } else if (logged.user_type === "admin") {
+          navigate("/Adminpage");
         }
-      
-      } 
+      }
     });
   };
 
-  
   return (
     <div className="divroot1">
       <div id="root">
@@ -62,7 +59,7 @@ const Login = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/"
                   >
@@ -103,8 +100,8 @@ const Login = () => {
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 name="id"
-               value={id}
-               onChange={onChange}
+                value={id}
+                onChange={onChange}
               />
               <label className="lable90" for="inputPassword5">
                 Password
@@ -121,7 +118,6 @@ const Login = () => {
               <Link onClick={onSubmit} className="loginbtn" to="/Student">
                 Login
               </Link>
-
             </form>
           </div>
         </div>

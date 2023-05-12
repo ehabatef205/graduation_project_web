@@ -28,7 +28,7 @@ const ViewCourses = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/"
                   >

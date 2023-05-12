@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../component/Get.css";
-import getid from "../api/getid"
+import getid from "../api/getid";
 import { useState } from "react";
 const Get = () => {
-
-
   const [formData, setFormData] = useState({
-    NAT_id: '',
-    HS_score: ''
+    NAT_id: "",
+    HS_score: "",
   });
-  const [id,setid]=useState("")
+  const [id, setid] = useState("");
 
   const { NAT_id, HS_score } = formData;
 
@@ -19,17 +17,15 @@ const Get = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await getid(NAT_id, HS_score).then(async (res)=>{
-      if(res.data.data.student_id){
-        setid(res.data.data.student_id)
-        
-      }else{
-        console.log(res)
+    await getid(NAT_id, HS_score).then(async (res) => {
+      if (res.data.data.student_id) {
+        setid(res.data.data.student_id);
+      } else {
+        console.log(res);
       }
     });
   };
 
-  
   return (
     <div className="divroot1">
       <div id="root">
@@ -58,7 +54,7 @@ const Get = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/"
                   >
@@ -116,12 +112,10 @@ const Get = () => {
               <Link className="loginbtn" onClick={onSubmit} to="">
                 Get ID{" "}
               </Link>
-              
             </form>
             <label className="lable90" for="inputPassword5">
-                {id}
-              </label>
-            
+              {id}
+            </label>
           </div>
         </div>
       </div>

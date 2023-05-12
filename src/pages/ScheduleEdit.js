@@ -21,11 +21,16 @@ const ScheduleEdit = () => {
       };
       setCourseData([...courseData, newData]);
     }
-    axios.post('/registration/',{group:'6449a7c4b74537645565670a'},{Headers:{'authorization': `Bearer ${localStorage.token}`}})
-    .then(async (res) => {
-      console.log("done")
-  })
-  .catch(error => console.log(error))
+    axios
+      .post(
+        "/registration/",
+        { group: "6449a7c4b74537645565670a" },
+        { Headers: { authorization: `Bearer ${localStorage.token}` } }
+      )
+      .then(async (res) => {
+        console.log("done");
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div className="divrootEd">
@@ -55,7 +60,7 @@ const ScheduleEdit = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/"
                   >

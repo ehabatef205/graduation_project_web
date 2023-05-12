@@ -13,7 +13,6 @@ const CreateCourse = () => {
     reader.addEventListener("load", () => {
       setImageUrl(reader.result);
       setImageSelected(true);
-
     });
 
     reader.readAsDataURL(file);
@@ -47,7 +46,7 @@ const CreateCourse = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/"
                   >
@@ -58,7 +57,7 @@ const CreateCourse = () => {
                 </li>
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/AdminPage"
                   >
@@ -69,7 +68,7 @@ const CreateCourse = () => {
                 </li>
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/Login"
                   >
@@ -90,14 +89,19 @@ const CreateCourse = () => {
             <div class="row g-2 align-items-center mb-3">
               <div className="col-auto">
                 <div style={{ position: "relative", display: "inline-block" }}>
-                {!imageSelected && (
-                <label htmlFor="image-upload">
-                    <img
-                      src="/images/plus1.png"
-                      alt="Upload "
-                      style={{ cursor: "pointer", width: '70px', height: '70px', marginLeft: "75px"}}
-                    />
-                  </label>
+                  {!imageSelected && (
+                    <label htmlFor="image-upload">
+                      <img
+                        src="/images/plus1.png"
+                        alt="Upload "
+                        style={{
+                          cursor: "pointer",
+                          width: "70px",
+                          height: "70px",
+                          marginLeft: "75px",
+                        }}
+                      />
+                    </label>
                   )}
                   <input
                     id="image-upload"
@@ -114,9 +118,9 @@ const CreateCourse = () => {
                         top: "50%",
                         left: "50%",
                         transform: "translate(-50%, -50%)",
-                        width: '80px',
-                        height: '80px',
-                        marginLeft: "115px"
+                        width: "80px",
+                        height: "80px",
+                        marginLeft: "115px",
                       }}
                     />
                   )}

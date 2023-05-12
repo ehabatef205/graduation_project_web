@@ -1,7 +1,7 @@
 .divrootVS {
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
+    height: 100vh;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -26,8 +26,6 @@
 .imgview {
     height: 25px;
     width: 30px;
-
-
 }
 
 .imgedit {

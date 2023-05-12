@@ -26,8 +26,6 @@
 .imgview {
     height: 25px;
     width: 30px;
-
-
 }
 
 .imgedit {
@@ -42,10 +40,12 @@
     right: 0;
     z-index: 9999;
 }
-.Add{
+
+.Add {
     width: 55px;
     height: 55px;
 }
-.table{
+
+.table {
     margin-top: 15px;
 }

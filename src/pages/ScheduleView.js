@@ -2,11 +2,9 @@ import { Link } from "react-router-dom";
 import "../component/ScheduleView.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 const ScheduleView = () => {
-  
-  
-    const handlePrint = () => {
-      window.print();
-    };
+  const handlePrint = () => {
+    window.print();
+  };
 
   return (
     <div className="divrootSch">
@@ -36,7 +34,7 @@ const ScheduleView = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item" style={{ marginLeft: "15px" }}>
                   <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  active"
+                    className="navbar-brand badge rounded-pill btn  fs-5  "
                     aria-current="page"
                     to="/"
                   >

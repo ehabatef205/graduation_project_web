@@ -68,15 +68,14 @@ const Courses = () => {
       </div>
 
       <div className="container3">
-      <a href="/CreateCourse">
-      <img className="Add" src="../images/plus.png" alt=""/>
-          
-      </a>
+        <a href="/CreateCourse">
+          <img className="Add" src="../images/plus.png" alt="" />
+        </a>
         <table class="table table-striped">
           <thead>
             <tr>
-             <th scope="col">Image</th>
-             <th scope="col">Course ID</th>
+              <th scope="col">Image</th>
+              <th scope="col">Course ID</th>
               <th scope="col">Course Name</th>
               <th scope="col">Edit</th>
             </tr>
