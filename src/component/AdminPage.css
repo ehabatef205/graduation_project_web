@@ -3,11 +3,15 @@
     background-size: cover;
     background-image: url(./2870157.jpg);
     height: auto;
+    width: 225vh;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .containerAdP {
     margin-top: 57px;
+    
+    
+
 }
 
 .Add2 {
@@ -43,4 +47,5 @@
 
 .containerco {
     border-radius: 15px;
+    
 }

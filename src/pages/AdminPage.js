@@ -113,7 +113,7 @@ const AdminPage = () => {
         </nav>
       </div>
       <div className="containerAdP">
-        <table>
+        <table >
           <thead>
             <tr>
               <th>
@@ -128,7 +128,7 @@ const AdminPage = () => {
               </th>
               <th>
                 <a href="/AddPost">
-                  <img className="Add2" src="../images/plus.png" alt="" />
+                  <img className="Add2" src="../images/pluss.png" alt="" />
                 </a>
               </th>
             </tr>

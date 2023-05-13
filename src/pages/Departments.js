@@ -66,7 +66,7 @@ const Departments = () => {
 
       <div className="container3">
         <a href="/CreateDepartment">
-          <img className="Add" src="../images/plus.png" alt="" />
+          <img className="Add" src="../images/pluss.png" alt="" />
         </a>
         <table class="table table-striped">
           <thead>

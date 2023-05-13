@@ -69,7 +69,7 @@ const Courses = () => {
 
       <div className="container3">
         <a href="/CreateCourse">
-          <img className="Add" src="../images/plus.png" alt="" />
+          <img className="Add" src="../images/pluss.png" alt="" />
         </a>
         <table class="table table-striped">
           <thead>
