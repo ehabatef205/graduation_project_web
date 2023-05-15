@@ -133,7 +133,6 @@ const AdminPage = () => {
             </tr>
           </thead>
         </table>
-
         <Postlist></Postlist>
       </div>
     </div>
