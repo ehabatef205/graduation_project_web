@@ -15,4 +15,4 @@ const createpost=async(text,image,department,course_id)=>{
 }
 
 
-export default {createpost}
+export default createpost

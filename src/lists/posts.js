@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+
+import React, { useEffect } from "react";
 import "../component/AdminPage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "../api/axios";
@@ -8,7 +8,6 @@ import {
   Card,
   CardBody,
   CardText,
-  CardSubtitle,
   CardTitle,
   PopoverHeader,
   PopoverBody,
@@ -162,7 +161,7 @@ const Postlist = () => {
                           name="courseId"
                         />
                       </th>
-                      <a href="#">
+                      <a href="..">
                         <img
                           className="arrow"
                           src="../images/arrow.jpg"

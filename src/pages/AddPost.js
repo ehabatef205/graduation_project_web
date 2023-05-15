@@ -48,7 +48,7 @@ const AddPost = () => {
                   <Link
                     to="/Student"
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                    onClick={onsubmit}
+                    onClick={onSubmit}
                   >
                     <h className="h" style={{ color: "black" }}>
                       {" "}
