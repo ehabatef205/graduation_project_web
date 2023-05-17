@@ -118,6 +118,9 @@ const Login = () => {
               <Link onClick={onSubmit} className="loginbtn" to="/Student">
                 Login
               </Link>
+              <Link className="doctor" to="/Doctor">
+                Doctor
+              </Link>
             </form>
           </div>
         </div>

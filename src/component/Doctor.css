@@ -1,11 +1,19 @@
-.divrootd {
+.divrootdo {
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
+    background-image: url(./2870157.jpg);
+    height: auto;  
     font-family: 'Times New Roman', Times, serif;
 }
 
-.container3 {
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.containerdo {
     height: auto;
     background-size: cover;
     width: 100%;
@@ -19,29 +27,12 @@
     width: 30px;
 }
 
-.imgedit {
-    height: 25px;
-    width: 60px;
-}
-
-.navbar.fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-}
-
-.Add {
-    width: 55px;
-    height: 55px;
-}
-
 .table {
     margin-top: 15px;
 }
 
-.department {
+.course {
     width: 55px;
     height: 55px;
 }
+

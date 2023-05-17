@@ -1,0 +1,38 @@
+.divrootSchD {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.buttonD {
+    height: 40px;
+    width: 70px;
+    background-color: #b7e576;
+    border: none;
+    color: black;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.containerSchD {
+    height: auto;
+    background-size: cover;
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navbar {
+    background-color: #83cc61;
+    color: #000;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }

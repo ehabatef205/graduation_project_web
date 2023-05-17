@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import "../component/Courses.css";
+import "../component/DoctorPosts.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import CourseList from "../lists/courselist";
+import Postlist from "../lists/posts";
 
-const Courses = () => {
+const DoctorPosts = () => {
   return (
-    <div className="divrootc">
+    <div className="divrootDP">
       <div id="root">
         <nav className="navbar navbar-expand-lg navbar-dark   fixed-top">
           <div className="container-fluid">
@@ -39,24 +39,14 @@ const Courses = () => {
                       Home
                     </h>
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/AdminPage"
-                    id="login-link"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      Admin{" "}
-                    </h>
-                  </Link>
-                </li>
+                </li>               
                 <li className="nav-item">
                   <Link
                     to="/Login"
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
                   >
                     <h className="h" style={{ color: "black" }}>
+                      {" "}
                       Log Out
                     </h>
                   </Link>
@@ -66,26 +56,32 @@ const Courses = () => {
           </div>
         </nav>
       </div>
-
-      <div className="container3">
-        <a href="/CreateCourse">
-          <img className="Add" src="../images/pluss.png" alt="" />
-        </a>
-        <table class="table table-striped">
+      <div className="containerDP">
+        <table >
           <thead>
             <tr>
-              <th scope="col">Image</th>
-              <th scope="col">Course ID</th>
-              <th scope="col">Course Name</th>
-              <th scope="col">Edit</th>
+              <th>
+                {" "}
+                <h1
+                  style={{
+                    marginLeft: "30px",
+                  }}
+                >
+                  Posts
+                </h1>
+              </th>
+              <th>
+                <a href="/AddPost">
+                  <img className="Add2" src="../images/pluss.png" alt="" />
+                </a>
+              </th>
             </tr>
           </thead>
-          <CourseList></CourseList>
         </table>
-        <br></br>
+        <Postlist></Postlist>
       </div>
     </div>
   );
 };
 
-export default Courses;
+export default DoctorPosts;

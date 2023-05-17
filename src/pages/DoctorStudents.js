@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
-import "../component/Courses.css";
+import "../component/DoctorStudents.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import CourseList from "../lists/courselist";
-
-const Courses = () => {
+const DoctorStudents = () => {
   return (
-    <div className="divrootc">
+    <div className="divrootds">
       <div id="root">
-        <nav className="navbar navbar-expand-lg navbar-dark   fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
           <div className="container-fluid">
             <div className="divlogo fs-5">
               <h className="h" style={{ color: "black" }}>
@@ -42,21 +39,11 @@ const Courses = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/AdminPage"
-                    id="login-link"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      Admin{" "}
-                    </h>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
                     to="/Login"
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
                   >
                     <h className="h" style={{ color: "black" }}>
+                      {" "}
                       Log Out
                     </h>
                   </Link>
@@ -65,27 +52,38 @@ const Courses = () => {
             </div>
           </div>
         </nav>
-      </div>
-
-      <div className="container3">
-        <a href="/CreateCourse">
-          <img className="Add" src="../images/pluss.png" alt="" />
-        </a>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Image</th>
-              <th scope="col">Course ID</th>
-              <th scope="col">Course Name</th>
-              <th scope="col">Edit</th>
-            </tr>
-          </thead>
-          <CourseList></CourseList>
-        </table>
-        <br></br>
+        <div className="containerds">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Student ID</th>
+                <th scope="col">Student Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1927204</th>
+                <th>Rahma Sabry Ahmed</th>
+              </tr>
+              <tr>
+                <th scope="row">1927109</th>
+                <th>Ziad Mohammed Ezzat</th>
+              </tr>
+              <tr>
+                <th scope="row">1927128</th>
+                <th>Ahmed Mahmoud Wael</th>
+              </tr>
+              <tr>
+                <th scope="row">1827066</th>
+                <th>Ehab Ahmed Mohammed</th>
+              </tr>
+            </tbody>
+          </table>
+          <br></br>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Courses;
+export default DoctorStudents;

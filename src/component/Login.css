@@ -99,3 +99,21 @@ form-label {
   text-decoration: none;
   color: #000;
 }
+
+.doctor {
+  background-color: #b7e576;
+  border: none;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 29px;
+  width: 60px;
+  content: icon;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.doctor:hover {
+  text-decoration: none;
+  color: #000;
+}

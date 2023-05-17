@@ -17,6 +17,10 @@ import CreateStudent from "./pages/CreateStudent";
 import Departments from "./pages/Departments";
 import Courses from "./pages/Courses";
 import AddPost from "./pages/AddPost";
+import Doctor from "./pages/Doctor";
+import DoctorPosts from "./pages/DoctorPosts";
+import DoctorStudents from "./pages/DoctorStudents";
+import DoctorSchedule from "./pages/DoctorSchedule";
 function App() {
 
   
@@ -42,6 +46,10 @@ function App() {
         <Route path="Departments" element={<Departments/>} />
         <Route path="Courses" element={<Courses/>} />
         <Route path="AddPost" element={<AddPost/>} />
+        <Route path="Doctor" element={<Doctor/>} />
+        <Route path="DoctorPosts" element={<DoctorPosts/>} />
+        <Route path="DoctorStudents" element={<DoctorStudents/>} />
+        <Route path="DoctorSchedule" element={<DoctorSchedule/>} />
       </Routes>
     </BrowserRouter>
   );
