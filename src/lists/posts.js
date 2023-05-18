@@ -11,7 +11,6 @@ import {
   CardText,
   CardTitle,
   PopoverHeader,
-  PopoverBody,
   Button,
   UncontrolledPopover,
 } from "reactstrap";
