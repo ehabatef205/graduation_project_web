@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../component/CreateCourse.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+
 const CreateCourse = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [imageSelected, setImageSelected] = useState(false);
-
+  const [DepartmentId,setDepartmentId]= useState('');
+  const [DepartmentName,setDepartmentName]= useState('');
+  const [DepartmentDesc,setDepartmentDesc]= useState('');
+  const navigate = useNavigate();
   function handleImageChange(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -13,11 +18,31 @@ const CreateCourse = () => {
     reader.addEventListener("load", () => {
       setImageUrl(reader.result);
       setImageSelected(true);
+      console.log(imageUrl)      
     });
-
+    
     reader.readAsDataURL(file);
+    
   }
-
+  const checkinput=()=>{
+    if(DepartmentDesc&&DepartmentId&&DepartmentName&&imageUrl)
+      return true
+    return false
+  }
+  const handeSubmit=()=>{
+    if(checkinput)
+      axios.post("department/create_department",
+      {
+        department_id: DepartmentId,
+        department_name:DepartmentName,
+        department_description: DepartmentDesc,
+        image:imageUrl
+      }
+      )
+      .then((res)=>{
+        console.log(res)
+        navigate("/Adminpage");})
+  }
   return (
     <div className="divrootup">
       <div id="root">
@@ -143,6 +168,9 @@ const CreateCourse = () => {
                   id="departmentId"
                   placeholder="Enter here"
                   name="departmentId"
+                  value={DepartmentId}
+                  onChange={(e)=>{
+                    setDepartmentId(e.target.value)}}
                 />
               </div>
             </div>
@@ -163,6 +191,9 @@ const CreateCourse = () => {
                   id="departmentName"
                   placeholder="Enter here"
                   name="departmentName"
+                  value={DepartmentName}
+                  onChange={(e)=>{
+                    setDepartmentName(e.target.value)}}
                 />
               </div>
             </div>
@@ -182,10 +213,13 @@ const CreateCourse = () => {
                   id="corsedepartment"
                   placeholder="Enter here"
                   name="corsedepartment"
+                  value={DepartmentDesc}
+                  onChange={(e)=>{
+                    setDepartmentDesc(e.target.value)}}
                 />
               </div>
             </div>
-            <button type="submit" className="button6">
+            <button type="submit" className="button6" onClick={handeSubmit} >
               Create
             </button>
           </form>

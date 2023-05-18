@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import "../component/AdminPage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "../api/axios";
+import Commentlist from "./commentlist";
 
 import {
   Card,
@@ -86,93 +87,7 @@ const Postlist = () => {
               >
                 Comments
               </PopoverHeader>
-              <PopoverBody>
-                <div className="containerco">
-                  <table>
-                    <thead>
-                      <tr>
-                        <img
-                          className="person"
-                          src="../images/person.png"
-                          alt=""
-                        />
-                        <th>
-                          {" "}
-                          <h5>Ziad Mohammed</h5> 2 hours
-                        </th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                  </table>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card‘s content.
-                </div>
-                <hr></hr>
-                <div className="containerco">
-                  <table>
-                    <thead>
-                      <tr>
-                        <img
-                          className="person"
-                          src="../images/person.png"
-                          alt=""
-                        />
-                        <th>
-                          {" "}
-                          <h5>Ziad Mohammed</h5> 2 hours
-                        </th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                  </table>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card‘s content.
-                </div>
-                <hr></hr>
-                <div className="containerco">
-                  <table>
-                    <thead>
-                      <tr>
-                        <img
-                          className="person"
-                          src="../images/person.png"
-                          alt=""
-                        />
-                        <th>
-                          {" "}
-                          <h5>Ziad Mohammed</h5> 2 hours
-                        </th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                  </table>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card‘s content.
-                </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="courseId"
-                          placeholder="Comment..."
-                          name="courseId"
-                        />
-                      </th>
-                      <a href="..">
-                        <img
-                          className="arrow"
-                          src="../images/arrow.jpg"
-                          alt=""
-                        />{" "}
-                      </a>
-                      <th></th>
-                    </tr>
-                  </thead>
-                </table>
-              </PopoverBody>
+              <Commentlist post={post}></Commentlist>
             </UncontrolledPopover>
           </CardBody>
         </Card>
