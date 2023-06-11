@@ -71,6 +71,17 @@ const Student = () => {
                 </li>
                 <li className="nav-item">
                   <Link
+                    to="/Grades"
+                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
+                  >
+                    <h className="h90" style={{ color: "black" }}>
+                      {" "}
+                     Grades
+                    </h>{" "}
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
                     className="navbar-brand badge rounded-pill btn btn-outline-black fs-5"
                     aria-current="page"
                     to="/Login"

@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import "../component/Doctor.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Postlist from "../lists/posts";
+
 const Doctor = () => {
+  const student_id = JSON.parse(localStorage.getItem("data")).student_id;
+  const name = JSON.parse(localStorage.getItem("data")).name;
+  const department = JSON.parse(localStorage.getItem("data")).department;
+  const image = JSON.parse(localStorage.getItem("data")).image;
+
   return (
     <div className="divrootdo">
       <div id="root">
@@ -49,6 +56,28 @@ const Doctor = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
+                <Link
+                  className="navbar-brand badge rounded-pill btn  fs-5 "
+                  aria-current="page"
+                  to="/DoctorCourses"
+                >
+                  <h className="h" style={{ color: "black" }}>
+                    Courses
+                  </h>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="navbar-brand badge rounded-pill btn  fs-5 "
+                  aria-current="page"
+                  to="/AddGradesD"
+                >
+                  <h className="h" style={{ color: "black" }}>
+                    Add Grades
+                  </h>
+                </Link>
+              </li>
+                <li className="nav-item">
                   <Link
                     to="/Login"
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
@@ -63,136 +92,65 @@ const Doctor = () => {
             </div>
           </div>
         </nav>
-        <div className="containerdo">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Image</th>
-                <th scope="col">Course ID</th>
-                <th scope="col">Course Name</th>
-                <th scope="col">View</th>
-                <th scope="col">Students</th>
-              </tr>
-            </thead>
+        <div
+        style={{
+          marginLeft: "20px",
+          backgroundColor: "white",
+          justifyItems: "center",
+        }}
+        className="col-p-3-bg-light"
+      >
+        <form style={{ marginLeft: "60px" }}>
+          <img
+            style={{ marginLeft: "80px" }}
+            src={image}
+            className="card-img-top2"
+            alt="..."
+          />
+          <table class="table ">
             <tbody>
               <tr>
-                <th scope="row">
-                  {" "}
-                  <img
-                    className="course"
-                    src="../images/download (1).jpeg"
-                    alt=""
-                  />
-                </th>
-                <th>Comp408</th>
-                <td>Artificial Intelligence</td>
-
-                <td>
-                <a href="/DoctorPosts">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
-                <td>
-                  <a href="/DoctorStudents">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
+                <th>Full Name:</th>
+                <td>{name}</td>
               </tr>
               <tr>
-                <th scope="row">
-                  {" "}
-                  <img
-                    className="course"
-                    src="../images/1000_F_89973923_0lfduzsXEqiKKGN71ruGQ4kdf0dgnQid.jpg"
-                    alt=""
-                  />
-                </th>
-                <th>Comp402</th>
-                <td>Cryptology </td>
-
-                <td>
-                <a href="/DoctorPosts">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
-                <td>
-                  <a href="/DoctorStudents">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
+                <th>ID:</th>
+                <td>{student_id}</td>
               </tr>
               <tr>
-                <th scope="row">
-                  {" "}
-                  <img
-                    className="course"
-                    src="../images/9780030846939.OL.0.m.jpg"
-                    alt=""
-                  />
-                </th>
-                <th>Math494 </th>
-                <td>Selected Topics in Mathematics (2)</td>
-
-                <td>
-                <a href="/DoctorPosts">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
-                <td>
-                  <a href="/DoctorStudents">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  {" "}
-                  <img
-                    className="course"
-                    src="../images/download.jpeg"
-                    alt=""
-                  />
-                </th>
-                <th>Comp427</th>
-                <td>Selected Programming Languages </td>
-
-                <td>
-                <a href="/DoctorPosts">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
-                <td>
-                  <a href="/DoctorStudents">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  {" "}
-                  <img
-                    className="course"
-                    src="../images/download (2).jpeg"
-                    alt=""
-                  />
-                </th>
-                <th>Math212</th>
-                <td>Linear Algebra and Geometry (2)</td>
-                <td>
-                  <a href="/DoctorPosts">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
-                <td>
-                  <a href="/DoctorStudents">
-                    <img className="imgview" src="../images/eye1.png" alt="" />
-                  </a>
-                </td>
+                <th>Department:</th>
+                <td>{department}</td>
               </tr>
             </tbody>
           </table>
-          <br></br>
+          <Link
+            style={{ marginBottom: "10px", borderRadius: "5px" }}
+            className="update"
+            aria-current="page"
+            to="/Update"
+          >
+            Update
+          </Link>
+        </form>
+      </div>
+      <div
+        style={{
+          width: "800px",
+          backgroundColor: "white",
+          height: "700px",
+        }}
+        className="col-p-5-bg-light"
+      >
+        <div
+          class="nav justify-content-center"
+          style={{ backgroundColor: "#83cc61" }}
+        >
+          <div class="nav-item">
+            <h1>Advertisements</h1>
+          </div>
         </div>
+        <Postlist></Postlist>
+      </div>
       </div>
     </div>
   );

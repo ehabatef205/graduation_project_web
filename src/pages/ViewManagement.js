@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import "../component/ViewStudent.css";
+import "../component/ViewManagement.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Studentlist from "../lists/studentlist";
-const ViewStudent = () => {
+const ViewManagement = () => {
   return (
-    <div className="divrootVS">
+    <div className="divrootVM">
       <div id="root">
         <nav className="navbar navbar-expand-lg navbar-dark   fixed-top">
           <div className="container-fluid">
@@ -67,24 +66,35 @@ const ViewStudent = () => {
       </div>
 
       <div className="container3">
-      <a href="/CreateStudent">
+      <a href="/CreateManagement">
       <img className="Add" src="../images/pluss.png" alt="" />
       </a>
         <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col">Student code</th>
-              <th scope="col">Student Name</th>
-              <th scope="col"> GPA </th>
-              <th scope="col">View</th>
+              <th scope="col">Management code</th>
+              <th scope="col">Management Name</th>
             </tr>
           </thead>
-          <Studentlist></Studentlist>
-        </table>
+          <tbody>
+          <tr>
+            <th scope="row" >
+              1927109
+            </th>
+            <td>Rahma Sabry </td>          
+          </tr>
+          <tr>
+          <th scope="row" >
+            1927204
+          </th>
+          <td>Ziad Mohammed </td>          
+        </tr>
+          </tbody>
+          </table>
         <br></br>
       </div>
     </div>
   );
 };
 
-export default ViewStudent;
+export default ViewManagement;

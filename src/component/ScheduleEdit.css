@@ -48,3 +48,13 @@
   width: 20px;
   height: 30px;
 }
+
+.delete{
+  width: 25px;
+  height: 25px;
+}
+
+.del{
+  border: none;
+
+}

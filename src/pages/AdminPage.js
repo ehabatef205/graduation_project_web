@@ -47,18 +47,7 @@ const AdminPage = () => {
                   >
                     <h className="h" style={{ color: "black" }}>
                       {" "}
-                      View Student
-                    </h>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/Courses"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      {" "}
-                      Courses
+                      Students
                     </h>
                   </Link>
                 </li>
@@ -75,26 +64,26 @@ const AdminPage = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/CreateManagement"
+                    to="/ViewManagement"
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
                   >
                     <h className="h" style={{ color: "black" }}>
                       {" "}
-                      Management
+                      Managements
                     </h>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    to="/CreateStudent"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      {" "}
-                      Student
-                    </h>
-                  </Link>
-                </li>
+                <Link
+                  to="/AddGradesA"
+                  className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
+                >
+                  <h className="h" style={{ color: "black" }}>
+                    {" "}
+                    Add Grades
+                  </h>
+                </Link>
+              </li>
                 <li className="nav-item">
                   <Link
                     to="/Login"

@@ -1,0 +1,38 @@
+.divrootdo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./2870157.jpg);
+    height: auto;  
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.containerdoc {
+    height: auto;
+    background-size: cover;
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.imgview {
+    height: 25px;
+    width: 30px;
+}
+
+.table {
+    margin-top: 15px;
+}
+
+.course {
+    width: 55px;
+    height: 55px;
+}
+

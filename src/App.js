@@ -21,6 +21,12 @@ import Doctor from "./pages/Doctor";
 import DoctorPosts from "./pages/DoctorPosts";
 import DoctorStudents from "./pages/DoctorStudents";
 import DoctorSchedule from "./pages/DoctorSchedule";
+import ViewManagement from "./pages/ViewManagement";
+import DoctorCourses from "./pages/DoctorCourses";
+import AddGradesA from "./pages/AddGradesA";
+import AddGradesD from "./pages/AddGradesD";
+import Grades from "./pages/Grades";
+
 function App() {
 
   
@@ -50,6 +56,11 @@ function App() {
         <Route path="DoctorPosts" element={<DoctorPosts/>} />
         <Route path="DoctorStudents" element={<DoctorStudents/>} />
         <Route path="DoctorSchedule" element={<DoctorSchedule/>} />
+        <Route path="ViewManagement" element={<ViewManagement />} />
+        <Route path="DoctorCourses" element={<DoctorCourses />} />
+        <Route path="AddGradesA" element={<AddGradesA/>} />
+        <Route path="AddGradesD" element={<AddGradesD/>} />
+        <Route path="Grades" element={<Grades/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -6,31 +6,36 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "../api/axios";
 
 const ScheduleEdit = () => {
-  const [courseName, selectedCourse] = useState("");
-  const [courseType, selectedType] = useState("");
-  const [groupNumber, selectedGroup] = useState("");
+  const [courseName, setCourseName] = useState('');
+  const [groupNumber, setGroupNumber] = useState('');
   const [courseData, setCourseData] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (courseName && courseType && groupNumber) {
+    if (courseName && groupNumber) {
       const newData = {
         courseName,
-        courseType,
         groupNumber,
       };
       setCourseData([...courseData, newData]);
+      setCourseName('');
+      setGroupNumber('');
     }
     axios
       .post(
-        "/registration/",
-        { group: "6449a7c4b74537645565670a" },
-        { Headers: { authorization: `Bearer ${localStorage.token}` } }
+        '/registration/',
+        { group: '6449a7c4b74537645565670a' },
+        { headers: { authorization: `Bearer ${localStorage.token}` } }
       )
-      .then(async (res) => {
-        console.log("done");
+      .then((res) => {
+        console.log('done');
       })
       .catch((error) => console.log(error));
+  };
+  const handleDelete = (index) => {
+    const updatedData = [...courseData];
+    updatedData.splice(index, 1);
+    setCourseData(updatedData);
   };
   return (
     <div className="divrootEd">
@@ -75,12 +80,14 @@ const ScheduleEdit = () => {
         </nav>
       </div>
       <div className="container11">
+      <div style={{ display: 'flex' }}>
+      <div style={{ flex: 1 }}>
         <form className="design" onSubmit={handleSubmit}>
           <label htmlFor="courseName">Select Course Name:</label>
           <select
             className="ll"
             id="courseName"
-            onChange={(e) => selectedCourse(e.target.value)}
+            onChange={(e) => setCourseName(e.target.value)}
           >
             <option value="">Courses</option>
             <option>
@@ -108,23 +115,11 @@ const ScheduleEdit = () => {
             </option>
           </select>
 
-          <label htmlFor="courseType">Select Course Type:</label>
-          <select
-            className="ll"
-            id="courseType"
-            onChange={(e) => selectedType(e.target.value)}
-          >
-            <option value="">Courses Type</option>
-            <option>n</option>
-            <option>p</option>
-            <option>t</option>
-          </select>
-
           <label htmlFor="groupNumber">Select Group Number:</label>
           <select
             className="ll"
             id="groupNumber"
-            onChange={(e) => selectedGroup(e.target.value)}
+            onChange={(e) => setGroupNumber(e.target.value)}
           >
             <option value="">Groups Number</option>
             <option>1 </option>
@@ -135,22 +130,29 @@ const ScheduleEdit = () => {
 
           <button type="submit">register</button>
         </form>
+        </div>
+        <div style={{ flex: 1 }}>
 
+        <p>Hello</p>
+        </div>
+        </div>
         {courseData.length > 0 && (
           <table class="table table-striped">
             <thead>
               <tr>
                 <th scope="col">Course Name</th>
-                <th scope="col">Course Type</th>
                 <th scope="col">Group Number</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
               {courseData.map((item, index) => (
                 <tr key={index}>
                   <td>{item.courseName}</td>
-                  <td>{item.courseType}</td>
                   <td>{item.groupNumber}</td>
+                 <td> <button onClick={() => handleDelete(index)} className="del">  
+                  <img className="delete" src="../images/401036.png" alt="" />
+                  </button></td>
                 </tr>
               ))}
             </tbody>
