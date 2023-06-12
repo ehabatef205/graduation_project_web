@@ -26,6 +26,10 @@ import DoctorCourses from "./pages/DoctorCourses";
 import AddGradesA from "./pages/AddGradesA";
 import AddGradesD from "./pages/AddGradesD";
 import Grades from "./pages/Grades";
+import GradesDetails from "./pages/GradesDetails";
+import AddDegrees from "./pages/AddDegrees";
+import InsideCourses from "./pages/InsideCourses";
+import InsideDegrees from "./pages/InsideDegrees";
 
 function App() {
 
@@ -61,6 +65,10 @@ function App() {
         <Route path="AddGradesA" element={<AddGradesA/>} />
         <Route path="AddGradesD" element={<AddGradesD/>} />
         <Route path="Grades" element={<Grades/>} />
+        <Route path="GradesDetails" element={<GradesDetails/>} />
+        <Route path="AddDegrees" element={<AddDegrees/>} />
+        <Route path="InsideCourses" element={<InsideCourses/>} />
+        <Route path="InsideDegrees" element={<InsideDegrees/>} />
       </Routes>
     </BrowserRouter>
   );

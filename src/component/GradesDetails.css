@@ -1,4 +1,4 @@
-.divrootG {
+.divrootGD {
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;  
@@ -12,7 +12,7 @@
     right: 0;
     z-index: 9999;
 }
-.containerG {
+.containerGD {
     height: auto;
     background-size: cover;
     width: 100%;
@@ -21,17 +21,5 @@
     padding-right: 35px;
 }
 
-.imgview {
-    height: 25px;
-    width: 30px;
-}
 
-.table {
-    margin-top: 15px;
-}
-
-.course {
-    width: 55px;
-    height: 55px;
-}
 

@@ -1,0 +1,52 @@
+.divrootADE {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 94vh;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .containerADE {
+    height: auto;
+    background-size: cover;
+    width: 100%;
+    margin-top: 56px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  
+  .designA {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+  
+  .designA label {
+    width: 200px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .designA button {
+    margin-bottom: 22px;
+    background-color: #b7e576;
+    color: black;
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .inputA{
+    border-radius: 20px;
+    width: 200px;
+    height: 30px; 
+  }
+
+  .inputAD{
+    border-radius: 20px;
+    width: 60px;
+    height: 30px; 
+  }
+  
+  

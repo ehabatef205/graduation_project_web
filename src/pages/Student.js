@@ -54,7 +54,7 @@ const Student = () => {
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
                   >
                     <h className="h90" style={{ color: "black" }}>
-                      Click here to view/print the schedule
+                       View Schedule
                     </h>{" "}
                   </Link>
                 </li>
@@ -65,7 +65,7 @@ const Student = () => {
                   >
                     <h className="h90" style={{ color: "black" }}>
                       {" "}
-                      Click here to register/edit the schedule
+                     Edit Schedule
                     </h>{" "}
                   </Link>
                 </li>

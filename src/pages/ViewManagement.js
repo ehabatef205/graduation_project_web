@@ -69,6 +69,11 @@ const ViewManagement = () => {
       <a href="/CreateManagement">
       <img className="Add" src="../images/pluss.png" alt="" />
       </a>
+      <input
+      className="search"
+      id="search"
+      placeholder="Search"
+    />
         <table class="table table-striped">
           <thead>
             <tr>

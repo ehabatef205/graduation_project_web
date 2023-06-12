@@ -70,6 +70,11 @@ const ViewStudent = () => {
       <a href="/CreateStudent">
       <img className="Add" src="../images/pluss.png" alt="" />
       </a>
+      <input
+      className="search"
+      id="search"
+      placeholder="Search"
+    />
         <table class="table table-striped">
           <thead>
             <tr>

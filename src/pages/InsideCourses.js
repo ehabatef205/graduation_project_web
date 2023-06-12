@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import "../component/AddGradesD.css";
+import "../component/InsideCourses.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const AddGradesD = () => {
+const InsideCourses = () => {
   return (
-    <div className="divrootAGD">
+    <div className="divrootIC">
       <div id="root">
         <nav className="navbar navbar-expand-lg navbar-dark   fixed-top">
           <div className="container-fluid">
@@ -54,7 +54,7 @@ const AddGradesD = () => {
         </nav>
       </div>
 
-      <div className="containerAGD">
+      <div className="containerIC">
         <table class="table table-striped">
           <thead>
             <tr>
@@ -78,7 +78,7 @@ const AddGradesD = () => {
             <td>Artificial Intelligence</td>
 
             <td>
-            <a href="/AddDegrees">
+            <a href="/InsideDegrees">
                 <img className="imgview" src="../images/eye1.png" alt="" />
               </a>
             </td>
@@ -96,7 +96,7 @@ const AddGradesD = () => {
             <td>Cryptology </td>
 
             <td>
-            <a href="/AddDegrees">
+            <a href="/InsideDegrees">
                 <img className="imgview" src="../images/eye1.png" alt="" />
               </a>
             </td>
@@ -114,7 +114,7 @@ const AddGradesD = () => {
             <td>Selected Topics in Mathematics (2)</td>
 
             <td>
-            <a href="/AddDegrees">
+            <a href="/InsideDegrees">
                 <img className="imgview" src="../images/eye1.png" alt="" />
               </a>
             </td>
@@ -132,7 +132,7 @@ const AddGradesD = () => {
             <td>Selected Programming Languages </td>
 
             <td>
-            <a href="/AddDegrees">
+            <a href="/InsideDegrees">
                 <img className="imgview" src="../images/eye1.png" alt="" />
               </a>
             </td>
@@ -149,7 +149,7 @@ const AddGradesD = () => {
             <th>Math212</th>
             <td>Linear Algebra and Geometry (2)</td>
             <td>
-              <a href="/AddDegrees">
+              <a href="/InsideDegrees">
                 <img className="imgview" src="../images/eye1.png" alt="" />
               </a>
             </td>
@@ -161,4 +161,4 @@ const AddGradesD = () => {
   );
 };
 
-export default AddGradesD;
+export default InsideCourses;

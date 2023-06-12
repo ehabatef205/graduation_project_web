@@ -53,7 +53,7 @@ const DoctorCourses = () => {
             </div>
           </div>
         </nav>
-        <div className="containerdo">
+        <div className="containerdoc">
           <table class="table table-striped">
             <thead>
               <tr>

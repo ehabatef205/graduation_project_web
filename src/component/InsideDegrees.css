@@ -1,0 +1,33 @@
+.divrootID {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 94vh;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .containerID {
+    height: auto;
+    background-size: cover;
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  
+  .inputID{
+    border-radius: 20px;
+    width: 60px;
+    height: 30px; 
+  }
+
+  .buttonID {
+    margin-bottom: 22px;
+    background-color: #b7e576;
+    color: black;
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  
