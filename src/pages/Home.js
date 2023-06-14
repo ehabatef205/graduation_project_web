@@ -144,7 +144,6 @@ const Home = () => {
         </nav>
       </div>
       <main>
-        <h1 className="visually-hidden">Heroes examples</h1>
         <div
           className="px-4 py-5 my-5 text-center"
           style={{ position: "relative", height: "400px" }}
