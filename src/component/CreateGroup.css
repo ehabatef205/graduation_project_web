@@ -1,0 +1,62 @@
+.divrootCG {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 94vh;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .containerCG {
+    height: auto;
+    background-size: cover;
+    width: 100%;
+    margin-top: 56px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  
+  .designCG {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+  
+  .designCG label {
+    width: 200px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .designCG button {
+    margin-top: 18px;
+    background-color: #b7e576;
+    color: black;
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .inputC{
+    border-radius: 20px;
+    width: 200px;
+    height: 30px; 
+  }
+
+  .inputCG{
+    border-radius: 20px;
+    width: 60px;
+    height: 30px; 
+  }
+
+  .deleteC{
+    width: 25px;
+    height: 25px;
+  }
+  
+  .delC{
+    border: none;
+  
+  }
+  
+  

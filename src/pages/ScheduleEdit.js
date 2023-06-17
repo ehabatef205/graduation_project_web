@@ -142,7 +142,7 @@ const ScheduleEdit = () => {
               <tr>
                 <th scope="col">Course Name</th>
                 <th scope="col">Group Number</th>
-                <th scope="col"></th>
+                <th scope="col">Delete</th>
               </tr>
             </thead>
             <tbody>

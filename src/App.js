@@ -30,6 +30,7 @@ import GradesDetails from "./pages/GradesDetails";
 import AddDegrees from "./pages/AddDegrees";
 import InsideCourses from "./pages/InsideCourses";
 import InsideDegrees from "./pages/InsideDegrees";
+import CreateGroup from "./pages/CreateGroup";
 
 function App() {
 
@@ -69,6 +70,7 @@ function App() {
         <Route path="AddDegrees" element={<AddDegrees/>} />
         <Route path="InsideCourses" element={<InsideCourses/>} />
         <Route path="InsideDegrees" element={<InsideDegrees/>} />
+        <Route path="CreateGroup" element={<CreateGroup/>} />
       </Routes>
     </BrowserRouter>
   );

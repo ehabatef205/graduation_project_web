@@ -78,6 +78,7 @@ const Courses = () => {
               <th scope="col">Course ID</th>
               <th scope="col">Course Name</th>
               <th scope="col">Edit</th>
+              <th scope="col">Group</th>
             </tr>
           </thead>
           <CourseList></CourseList>
