@@ -185,15 +185,15 @@ const Home = () => {
               an international character, where staff members from different
               backgrounds can combine their talents with the common goal of
               being a leading faculty of science in Egypt.The Faculty of Science
-              has eleven departments: mathematics,physics,
-              astronomy,computer,geology,zology,entomology,geophysics botany,
-              chemistry and biophysics. More than 90% of our undergraduate
-              students continue their study at a graduate school (including that
-              of other universities or of other fields). Our students are
-              expected to master more advanced knowledge in their fields of
-              specialty through actual research and to be active players in
-              various fields, including researchers who work at universities,
-              government agencies or companies. Of course, a certain portion of
+              has eleven departments: mathematics,physics,astronomy,
+              computer,geology,zology,entomology,geophysics, botany, chemistry
+              and biophysics. More than 90% of our undergraduate students
+              continue their study at a graduate school (including that of other
+              universities or of other fields). Our students are expected to
+              master more advanced knowledge in their fields of specialty
+              through actual research and to be active players in various
+              fields, including researchers who work at universities, government
+              agencies or companies. Of course, a certain portion of
               undergraduate students join companies or government agencies right
               after graduation.
             </p>
