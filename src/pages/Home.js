@@ -169,26 +169,33 @@ const Home = () => {
           <h1 className="display-4 fw-bold">Information about Faculty</h1>
           <div className="col-lg-6 mx-auto">
             <p className="lead mb-4">
-              Quickly design and customize responsive mobile-first sites with
-              Bootstrap, the world’s most popular front-end open source toolkit,
-              featuring Sass variables and mixins, responsive grid system,
-              extensive prebuilt components, and powerful JavaScript plugins.
-              Quickly design and customize responsive mobile-first sites with
-              Bootstrap, the world’s most popular front-end open source toolkit,
-              featuring Sass variables and mixins, responsive grid system,
-              extensive prebuilt components, and powerful JavaScript plugins.
-              Quickly design and customize responsive mobile-first sites with
-              Bootstrap, the world’s most popular front-end open source toolkit,
-              featuring Sass variables and mixins, responsive grid system,
-              extensive prebuilt components, and powerful JavaScript plugins.
-              Quickly design and customize responsive mobile-first sites with
-              Bootstrap, the world’s most popular front-end open source toolkit,
-              featuring Sass variables and mixins, responsive grid system,
-              extensive prebuilt components, and powerful JavaScript plugins.
-              Quickly design and customize responsive mobile-first sites with
-              Bootstrap, the world’s most popular front-end open source toolkit,
-              featuring Sass variables and mixins, responsive grid system,
-              extensive prebuilt components, and powerful JavaScript plugins.
+              The Faculty of Science is a place for education and research on
+              science. Science is a study that engages in a “dialogue with
+              Nature” to understand the principles and laws working in the
+              natural world. We strive to unravel the mysteries of nature,
+              starting by asking simple questions such as “Why?” and “How?” The
+              principal incentives to do most research activities lie in pure
+              interest, and human wisdom has been accumulated in this manner for
+              many generations. Sometimes the understanding of Nature directly
+              results in applied use in the real world. Other times, it takes a
+              long time before the understanding of Nature brings a significant
+              change to our lifestyles. The Faculty of Science is a complete,
+              student-oriented science faculty where research and education are
+              closely related. The faculty aims to be an academic community with
+              an international character, where staff members from different
+              backgrounds can combine their talents with the common goal of
+              being a leading faculty of science in Egypt.The Faculty of Science
+              has eleven departments: mathematics,physics,
+              astronomy,computer,geology,zology,entomology,geophysics botany,
+              chemistry and biophysics. More than 90% of our undergraduate
+              students continue their study at a graduate school (including that
+              of other universities or of other fields). Our students are
+              expected to master more advanced knowledge in their fields of
+              specialty through actual research and to be active players in
+              various fields, including researchers who work at universities,
+              government agencies or companies. Of course, a certain portion of
+              undergraduate students join companies or government agencies right
+              after graduation.
             </p>
           </div>
         </div>
