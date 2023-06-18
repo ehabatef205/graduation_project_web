@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../component/Departments.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Departmentlist from "../lists/departmentlist";
+import Bars from "./statics/Bars";
 
 const Departments = () => {
   return (

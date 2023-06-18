@@ -29,12 +29,12 @@ const Postlist = () => {
 
   return (
     <div>
-      <div>
+
       {getPosts.map((post, key) => (<div className='totalHome' key={post._id}>
       <Card
           style={{
-            width: "50rem",
-            marginLeft: "570px",
+            width: "100%",
+            
             height: "auto",
             backgroundColor: "white",
           }}
@@ -44,7 +44,7 @@ const Postlist = () => {
               <table>
                 <thead>
                   <tr>
-                    <img className="person" src={post.management_image} alt="" />
+                    <td><img className="person" src={post.management_image} alt="" /></td>
                     <th>
                       {" "}
                       <h5>{post.management_name}</h5>
@@ -92,7 +92,7 @@ const Postlist = () => {
         </Card>
       <hr className="hr"></hr>
       </div>))}
-      </div>
+
 
 
   </div>

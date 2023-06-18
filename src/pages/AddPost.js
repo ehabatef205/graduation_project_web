@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../component/AddPost.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import createpost from "../api/getposts";
+import Bars from "./statics/Bars";
 const AddPost = () => {
   const navigate = useNavigate();
   const onSubmit = async () => {

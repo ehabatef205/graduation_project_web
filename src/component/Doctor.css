@@ -1,9 +1,10 @@
 .divrootdo {
-    background-repeat: repeat;
+
     height: 100vh;
     display: block;
     background-size: cover;
-    background-image: url(./2870157.jpg);
+    background-image: url(./2870157.jpg) ;
+    background-repeat: repeat;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 0px;
 }

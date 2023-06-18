@@ -1,17 +1,26 @@
-import { Link ,useNavigate } from "react-router-dom";
+import { Link ,useNavigate,useLocation } from "react-router-dom";
 import { useState } from "react";
 import "../component/CreateCourse.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import Bars from "./statics/Bars";
+import AdminBar from "./statics/AdminBar";
 
-const CreateDepartment = () => {
+const UpdateDepartment = (props) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [department,setDepartment]=useState({})
+  try {
+    setDepartment(location.state.department)
+  } catch (error) {
+    navigate(-1)
+  }
+  
   const [imageUrl, setImageUrl] = useState("");
   const [imageSelected, setImageSelected] = useState(false);
-  const [DepartmentId,setDepartmentId]= useState('');
-  const [DepartmentName,setDepartmentName]= useState('');
-  const [DepartmentDesc,setDepartmentDesc]= useState('');
-  const navigate = useNavigate();
+  const [DepartmentId]= useState(department.department_id);
+  const [DepartmentName,setDepartmentName]= useState(department.department_name);
+  const [DepartmentDesc,setDepartmentDesc]= useState(department.department_description);
+
 
   function handleImageChange(e) {
     const file = e.target.files[0];
@@ -32,7 +41,7 @@ const CreateDepartment = () => {
   }
   const handeSubmit=()=>{
     if(checkinput)
-      axios.post("department/create_department",
+      axios.put("department/update_department",
       {
         department_id: DepartmentId,
         department_name:DepartmentName,
@@ -41,16 +50,15 @@ const CreateDepartment = () => {
       },{headers:{authorization:localStorage.getItem("Authorization")}}
       )
       .then((res)=>{
-        console.log(res)
-        navigate("/Adminpage");})
+        navigate(-1);})
   }
   return (
     <div className="divrootup">
-      <Bars></Bars>
+      <AdminBar></AdminBar>
       <div className="child1">
         <div className="container">
           <form>
-            <h2 className="h2">Create Department</h2>
+            <h2 className="h2">Update :{department.department_id}</h2>
             <div class="row g-2 align-items-center mb-3">
               <div className="col-auto">
                 <div style={{ position: "relative", display: "inline-block" }}>
@@ -92,28 +100,7 @@ const CreateDepartment = () => {
                 </div>
               </div>
             </div>
-            <div class="row g-2 align-items-center mb-3">
-              <div className="col-auto">
-                <h5>
-                  {" "}
-                  <label htmlFor="department id" className="form-label">
-                    Department ID:
-                  </label>
-                </h5>
-              </div>
-              <div className="col-auto">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="departmentId"
-                  placeholder="Enter here"
-                  name="departmentId"
-                  value={DepartmentId}
-                  onChange={(e)=>{
-                    setDepartmentId(e.target.value)}}
-                />
-              </div>
-            </div>
+
 
             <div class="row g-2 align-items-center mb-3">
               <div className="col-auto">
@@ -130,7 +117,7 @@ const CreateDepartment = () => {
                   className="form-control"
                   id="departmentName"
                   placeholder="Enter here"
-                  name="departmentName"
+
                   value={DepartmentName}
                   onChange={(e)=>{
                     setDepartmentName(e.target.value)}}
@@ -152,7 +139,7 @@ const CreateDepartment = () => {
                   className="form-control"
                   id="corsedepartment"
                   placeholder="Enter here"
-                  name="corsedepartment"
+
                   value={DepartmentDesc}
                   onChange={(e)=>{
                     setDepartmentDesc(e.target.value)}}
@@ -160,7 +147,7 @@ const CreateDepartment = () => {
               </div>
             </div>
             <button type="submit" className="button6" onClick={handeSubmit} >
-              Create
+              Update 
             </button>
           </form>
         </div>
@@ -169,4 +156,4 @@ const CreateDepartment = () => {
   );
 };
 
-export default CreateDepartment;
+export default UpdateDepartment;

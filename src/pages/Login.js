@@ -27,6 +27,9 @@ const Login = () => {
         } else if (logged.user_type === "admin") {
           navigate("/Adminpage");
         }
+        else if (logged.user_type === "doctor") {
+          navigate("/Doctor");
+        }
       }
     });
   };
@@ -37,9 +40,9 @@ const Login = () => {
         <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
           <div className="container-fluid">
             <div className="divlogo fs-5">
-              <h className="h" style={{ color: "black" }}>
+              <h1 className="h" style={{ color: "black" }}>
                 Faculty Of Science
-              </h>
+              </h1>
             </div>
             <button
               className="navbar-toggler"
@@ -63,9 +66,9 @@ const Login = () => {
                     aria-current="page"
                     to="/"
                   >
-                    <h className="h" style={{ color: "black" }}>
+                    <h1 className="h" style={{ color: "black" }}>
                       Home
-                    </h>
+                    </h1>
                   </Link>
                 </li>
               </ul>
@@ -89,7 +92,7 @@ const Login = () => {
               onSubmit={onSubmit}
               style={{ width: "300px", marginLeft: "45px", marginTop: "65px" }}
             >
-              <label className="lable90" for="exampleInputEmail1">
+              <label className="lable90">
                 {" "}
                 ID
               </label>
@@ -103,7 +106,7 @@ const Login = () => {
                 value={id}
                 onChange={onChange}
               />
-              <label className="lable90" for="inputPassword5">
+              <label className="lable90" >
                 Password
               </label>
               <input
@@ -117,9 +120,6 @@ const Login = () => {
               />
               <Link onClick={onSubmit} className="loginbtn" to="/Student">
                 Login
-              </Link>
-              <Link className="doctor" to="/Doctor">
-                Doctor
               </Link>
             </form>
           </div>

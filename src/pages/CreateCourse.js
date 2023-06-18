@@ -1,10 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../component/CreateCourse.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import Bars from "./statics/Bars";
 const CreateCourse = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [imageSelected, setImageSelected] = useState(false);
+  const [course_name,setCours_name]=useState("")
+  const [course_id,setCourse_id]=useState("")
+  const [course_desc,setCours_desc]=useState("")
+  const [course_credit,setCours_credit]=useState("")
+  const [course_level,setCours_level]=useState("")
+  const [department,setDepartment]=useState("")
+
+  const navigate = useNavigate();
 
   function handleImageChange(e) {
     const file = e.target.files[0];
@@ -12,76 +22,42 @@ const CreateCourse = () => {
 
     reader.addEventListener("load", () => {
       setImageUrl(reader.result);
-      setImageSelected(true);
-      console.log(imageUrl);
+      setImageSelected(true);     
     });
-
+    
     reader.readAsDataURL(file);
+    
   }
+
+    const checkinput=()=>{
+      if(course_id&&imageUrl&&course_name&&course_credit&&course_desc&&course_level&&department)
+        return true
+      console.log("errr")
+      return false
+    }
+    const handeSubmit=()=>{
+      if(checkinput)
+        axios.post("course/create_course",
+        {
+          course_id:course_id,
+          coures_name:course_name,
+          course_description:course_desc,
+          course_credit:course_credit,
+          course_level:course_level,
+          department:department,
+          image:imageUrl
+        },{headers:{authorization:localStorage.getItem("Authorization")}}
+        )
+        .then((res)=>{
+          console.log(res)
+          navigate("/Adminpage");})
+        }
+    
+
+  
   return (
     <div className="divrootcc">
-      <div id="root">
-        <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
-          <div className="container-fluid">
-            <div className="divlogo fs-5">
-              <h className="h" style={{ color: "black" }}>
-                Faculty Of Science
-              </h>
-            </div>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="true"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item" style={{ marginLeft: "15px" }}>
-                  <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  "
-                    aria-current="page"
-                    to="/"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      Home
-                    </h>
-                  </Link>
-                </li>
-                <li className="nav-item" style={{ marginLeft: "15px" }}>
-                  <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  "
-                    aria-current="page"
-                    to="/AdminPage"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      Admin
-                    </h>
-                  </Link>
-                </li>
-                <li className="nav-item" style={{ marginLeft: "15px" }}>
-                  <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  "
-                    aria-current="page"
-                    to="/Login"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      Log Out
-                    </h>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <Bars></Bars>
       <div className="child1">
         <div className="container">
           <form>
@@ -143,6 +119,10 @@ const CreateCourse = () => {
                   id="courseId"
                   placeholder="Enter here"
                   name="courseId"
+                  value={course_id}
+                  onChange={(e)=>{
+                    setCourse_id(e.target.value)
+                  }}
                 />
               </div>
             </div>
@@ -162,6 +142,10 @@ const CreateCourse = () => {
                   id="courseName"
                   placeholder="Enter here"
                   name="courseName"
+                  value={course_name}
+                  onChange={(e)=>{
+                    setCours_name(e.target.value)
+                  }}
                 />
               </div>
             </div>
@@ -181,6 +165,10 @@ const CreateCourse = () => {
                   id="courseDescription"
                   placeholder="Enter here"
                   name="courseDescription"
+                  value={course_desc}
+                  onChange={(e)=>{
+                    setCours_desc(e.target.value)
+                  }}
                 />
               </div>
             </div>
@@ -200,6 +188,33 @@ const CreateCourse = () => {
                   id="courseCredit"
                   placeholder="Enter here"
                   name="courseCredit"
+                  value={course_credit}
+                  onChange={(e)=>{
+                    setCours_credit(e.target.value)
+                  }}
+                />
+              </div>
+            </div>
+            <div class="row g-2 align-items-center mb-3">
+              <div className="col-auto">
+                <h5>
+                  {" "}
+                  <label htmlFor="course level" className="form-label">
+                    Course level:
+                  </label>
+                </h5>
+              </div>
+              <div className="col-auto">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="course_level"
+                  placeholder="Enter here"
+                  name="course_level"
+                  value={course_level}
+                  onChange={(e)=>{
+                    setCours_level(e.target.value)
+                  }}
                 />
               </div>
             </div>
@@ -216,13 +231,17 @@ const CreateCourse = () => {
                 <input
                   type="text"
                   className="form-control"
-                  id="courseLevel"
+                  id="department"
                   placeholder="Enter here"
-                  name="courseLevel"
+                  name="department"
+                  value={department}
+                  onChange={(e)=>{
+                    setDepartment(e.target.value)
+                  }}
                 />
               </div>
             </div>
-            <button type="submit" className="button6">
+            <button className="button6" onClick={handeSubmit}>
               Create
             </button>
           </form>

@@ -3,99 +3,18 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../component/Student.css";
 import Postlist from "../lists/posts";
-
+import StudentBar from "./statics/StudentBar";
 const Student = () => {
   const student_id = JSON.parse(localStorage.getItem("data")).student_id;
   const name = JSON.parse(localStorage.getItem("data")).name;
   const department = JSON.parse(localStorage.getItem("data")).department;
   const image = JSON.parse(localStorage.getItem("data")).image;
 
+  
+
   return (
     <div className="divrootSt">
-      <div id="root">
-        <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
-          <div className="container-fluid">
-            <Link className="navbar-brand  fs-5" to="#">
-              <h className="h90" style={{ color: "black" }}>
-                Faculty Of Science
-              </h>
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                    aria-current="page"
-                    to="/"
-                  >
-                    {" "}
-                    <h className="h90" style={{ color: "black" }}>
-                      Home
-                    </h>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/ScheduleView"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h className="h90" style={{ color: "black" }}>
-                       View Schedule
-                    </h>{" "}
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/ScheduleEdit"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h className="h90" style={{ color: "black" }}>
-                      {" "}
-                     Edit Schedule
-                    </h>{" "}
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/Grades"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h className="h90" style={{ color: "black" }}>
-                      {" "}
-                     Grades
-                    </h>{" "}
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="navbar-brand badge rounded-pill btn btn-outline-black fs-5"
-                    aria-current="page"
-                    to="/Login"
-                  >
-                    <h className="h90" style={{ color: "black" }}>
-                      Log out
-                    </h>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <StudentBar/>
       <div
         style={{
           marginLeft: "20px",
@@ -111,7 +30,7 @@ const Student = () => {
             className="card-img-top2"
             alt="..."
           />
-          <table class="table ">
+          <table className="table ">
             <tbody>
               <tr>
                 <th>Full Name:</th>
@@ -150,10 +69,10 @@ const Student = () => {
         className="col-p-5-bg-light"
       >
         <div
-          class="nav justify-content-center"
+          className="nav justify-content-center"
           style={{ backgroundColor: "#83cc61" }}
         >
-          <div class="nav-item">
+          <div className="nav-item">
             <h1>Advertisements</h1>
           </div>
         </div>

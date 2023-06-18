@@ -87,9 +87,9 @@ const Home = () => {
         <nav className="navbar navbar-expand-lg navbar-dark   fixed-top">
           <div className="container-fluid">
             <div className="divlogo fs-5">
-              <h className="h" style={{ color: "black" }}>
+              <h1 className="h" style={{ color: "black" }}>
                 Faculty Of Science
-              </h>
+              </h1>
             </div>
             <button
               className="navbar-toggler collapsed "
@@ -111,9 +111,9 @@ const Home = () => {
                     aria-current="page"
                     to="/"
                   >
-                    <h className="h" style={{ color: "black" }}>
+                    <h1 className="h" style={{ color: "black" }}>
                       Home
-                    </h>
+                    </h1>
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -122,9 +122,9 @@ const Home = () => {
                     id="login-link"
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
                   >
-                    <h className="h" style={{ color: "black" }}>
+                    <h1 className="h" style={{ color: "black" }}>
                       Log in{" "}
-                    </h>
+                    </h1>
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -132,10 +132,10 @@ const Home = () => {
                     to="/GetID"
                     className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
                   >
-                    <h className="h" style={{ color: "black" }}>
+                    <h1 className="h" style={{ color: "black" }}>
                       {" "}
                       Get ID
-                    </h>
+                    </h1>
                   </Link>
                 </li>
               </ul>

@@ -1,51 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link ,useNavigate,useLocation} from "react-router-dom";
 import "../component/AddDegrees.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { useState,useEffect } from "react";
+import Bars from "./statics/Bars";
 
 const AddDegrees = () => {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [Group,setGroup]=useState({})
+  useEffect(()=>{
+   try {
+    setGroup(location.state.Group)
+    console.log(location.state.Group)
+  } catch (error) {
+    navigate(-1)
+  }
+},[])
   return (
     <div className="divrootADE">
-      <div id="root">
-        <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
-          <div className="container-fluid">
-            <div className="divlogo fs-5">
-              <h className="h" style={{ color: "black" }}>
-                Faculty Of Science
-              </h>
-            </div>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="true"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item" style={{ marginLeft: "15px" }}>
-                  <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  "
-                    aria-current="page"
-                    to="/"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      Home
-                    </h>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <Bars/>
       <div className="containerADE">
         <form className="designA">
           <label htmlFor="Type">Select Type:</label>
@@ -64,7 +38,7 @@ const AddDegrees = () => {
             className="inputA"
             id="studentId"
           />
-          <table class="table table-striped">
+          <table className="table table-striped">
           <thead>
             <tr>
               <th scope="col">Student code</th>
@@ -73,13 +47,13 @@ const AddDegrees = () => {
             </tr>
           </thead>
           <tbody>
-          <tr>
+          {Group.students.map((student_id,key)=>(<tr>
             <th scope="row">
               Rahma Sabry
             </th>
             <th>1927204</th>
             <td><input className="inputAD"></input></td>
-          </tr>
+          </tr>))}
           <tr>
             <th scope="row">
               Ziad Mohamed

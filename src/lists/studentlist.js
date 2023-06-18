@@ -1,9 +1,11 @@
 import React, {  useEffect } from 'react';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "../api/axios";
+import { useNavigate } from 'react-router-dom';
 
 const Studentlist=()=>{
-
+  const navigation=useNavigate()
   const [ getStudents, setStudents] = React.useState([])
   
   useEffect(() => {
@@ -21,9 +23,12 @@ return(
               <td>{Student.name}</td>
               <td>2.01</td>
               <td>
-                <a href="/Update">
-                  <img className="imgview" src={Student.image} alt="" />
-                </a>
+           
+                  <img className="imgview" src={Student.image||"http://res.cloudinary.com/ddi8zmubw/image/upload/v1683142987/1827172.jpg"} 
+                  onClick={()=>{ 
+                    navigation('/Update',{state:{student:Student}})
+                  }} />
+                
               </td>
               </tr>))}
               </tbody>

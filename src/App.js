@@ -8,10 +8,11 @@ import ScheduleView from "./pages/ScheduleView";
 import Student from "./pages/Student";
 import Update from "./pages/Update";
 import UpdateCourses from "./pages/UpdateCourses";
-import ViewCourses from "./pages/ViewCourses";
+
 import ViewStudent from "./pages/ViewStudent";
 import CreateCourse from "./pages/CreateCourse";
 import CreateDepartment from "./pages/CreateDepartment";
+import UpdateDepartment from "./pages/UpdateDepartment";
 import CreateManagement from "./pages/CreateManagement";
 import CreateStudent from "./pages/CreateStudent";
 import Departments from "./pages/Departments";
@@ -47,7 +48,7 @@ function App() {
         <Route path="Update" element={<Update />} />
         <Route path="AdminPage" element={<AdminPage />} />
         <Route path="ViewStudent" element={<ViewStudent />} />
-        <Route path="ViewCourses" element={<ViewCourses />} />
+
         <Route path="UpdateCourses" element={<UpdateCourses />} />
         <Route path="ScheduleEdit" element={<ScheduleEdit />} />
         <Route path="CreateCourse" element={<CreateCourse />} />
@@ -71,6 +72,8 @@ function App() {
         <Route path="InsideCourses" element={<InsideCourses/>} />
         <Route path="InsideDegrees" element={<InsideDegrees/>} />
         <Route path="CreateGroup" element={<CreateGroup/>} />
+        <Route path="UpdateDepartment" element={<UpdateDepartment/>} />
+
       </Routes>
     </BrowserRouter>
   );

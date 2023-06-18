@@ -1,7 +1,38 @@
-import { Link } from "react-router-dom";
+import { Link ,useNavigate,useLocation } from "react-router-dom";
+import { useState,useEffect } from "react";
 import "../component/Update.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 const Update = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [student,setStudent]=useState({})
+  useEffect(() => {
+    try {
+      setStudent(location.state.student)
+    } catch (error) {
+      navigate(-1)
+    }
+  }, [])
+  
+  const [formData, setFormData] = useState({
+    email:student.email,
+    phone: student.phone,
+    mobile: student.mobile,
+    address: student.address,
+  });
+  const{email,
+    phone,
+    mobile,
+    address}=formData;
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const onSubmit = async (e) => {
+      e.preventDefault()
+      console.log(formData)
+
+    }
+
   return (
     <div className="divrootup">
       <div id="root">
@@ -82,10 +113,10 @@ const Update = () => {
               <div className="col-auto ">
                 <input
                   type="text"
-                  readonly
+                  readOnly
                   class="form-control-plaintext"
                   id="staticName"
-                  value="Ahmed Mohamed Mahmoud"
+                  value={student.name}
                 />
               </div>
             </div>
@@ -101,10 +132,10 @@ const Update = () => {
               <div className="col-auto">
                 <input
                   type="text"
-                  readonly
+                  readOnly
                   class="form-control-plaintext"
                   id="staticCode"
-                  value="1927109"
+                  value={student.student_id}
                 />
               </div>
             </div>
@@ -120,7 +151,7 @@ const Update = () => {
               <div className="col-auto">
                 <input
                   type="text"
-                  readonly
+                  readOnly
                   class="form-control-plaintext"
                   id="staticgpa"
                   value="2.01"
@@ -139,10 +170,10 @@ const Update = () => {
               <div className="col-auto">
                 <input
                   type="text"
-                  readonly
+                  readOnly
                   class="form-control-plaintext"
                   id="staticNational"
-                  value="30012170104237"
+                  value={student.NAT_id}
                 />
               </div>
             </div>
@@ -159,8 +190,9 @@ const Update = () => {
                 <input
                   type="email"
                   className="form-control"
+                  value={email}
                   id="email"
-                  placeholder="Edit here"
+                  onChange={onChange}
                   name="email"
                 />
               </div>
@@ -180,7 +212,9 @@ const Update = () => {
                   className="form-control"
                   id="mobileNumber"
                   placeholder="Edit here"
-                  name="mobileNumber"
+                  name="mobile"
+                  value={mobile}
+                  onChange={onChange}
                 />
               </div>
             </div>
@@ -200,6 +234,8 @@ const Update = () => {
                   id="address"
                   placeholder="Edit here"
                   name="address"
+                  value={address}
+                  onChange={onChange}
                 />
               </div>
             </div>
@@ -207,28 +243,8 @@ const Update = () => {
               <div className="col-auto">
                 <h5>
                   {" "}
-                  <label htmlFor="nationality" className="form-label">
-                    Nationality:
-                  </label>
-                </h5>
-              </div>
-              <div className="col-auto">
-                <select
-                  class="form-select form-select-lg mb-3"
-                  aria-label=".form-select-lg example"
-                >
-                  <option selected>Nationality</option>
-                  <option value="1">Egyptian</option>
-                  <option value="2">Not Egyptian</option>
-                </select>
-              </div>
-            </div>
-            <div class="row g-2 align-items-center mb-3">
-              <div className="col-auto">
-                <h5>
-                  {" "}
                   <label htmlFor="pwd" className="form-label">
-                    Password:
+                    phone:
                   </label>
                 </h5>
               </div>
@@ -238,11 +254,13 @@ const Update = () => {
                   className="form-control"
                   id="pwd"
                   placeholder="Edit password"
-                  name="pswd"
+                  name="phone"
+                  value={phone}
+                  onChange={onChange}
                 />
               </div>
             </div>
-            <button type="submit" className="button6">
+            <button  onClick={onSubmit}  className="button6">
               Save modifications
             </button>
           </form>

@@ -8,10 +8,15 @@ const createpost=async(text,image,department,course_id)=>{
         department:"admin",
         course_id:"admin",
         management_id:user.managment_id,
-        management_name: user.managment_name,
+        management_name: user.name,
         management_image: user.image,
     },
     { headers: { 'Authorization': localStorage.getItem('Authorization') }})
+    console.log(
+        user.managment_id,
+         user.managment_name,
+         user.image,
+    )
 }
 
 
