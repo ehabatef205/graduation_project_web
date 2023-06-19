@@ -91,16 +91,16 @@ const AdminBar=()=>{
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    to="/CreateStudent"
-                    className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
-                  >
-                    <h1 className="h" style={{ color: "black" }}>
-                      {" "}
-                      Student
-                    </h1>
-                  </Link>
-                </li>
+              <Link
+                to="/AddGradesA"
+                className="navbar-brand badge rounded-pill btn btn-outline-black  fs-5"
+              >
+                <h1 className="h" style={{ color: "black" }}>
+                  {" "}
+                  Add Grades
+                </h1>
+              </Link>
+            </li>
                 <li className="nav-item">
                   <button
                     onClick={log_out}

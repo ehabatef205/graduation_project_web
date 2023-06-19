@@ -1,8 +1,11 @@
 
 import "../component/GradesDetails.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import  { useState } from 'react';
+import  { useState,useEffect } from 'react';
 import Bars from "./statics/Bars";
+import { useLocation } from "react-router-dom";
+import axios from "../api/axios"
+
 import {
   Accordion,
   AccordionBody,
@@ -11,6 +14,28 @@ import {
 } from 'reactstrap';
 
 const GradesDetails = () => {
+  const location = useLocation();
+  const [quiz,setquiz]=useState([])
+  const [ass,setass]=useState([])
+  const [Midterm,setMidterm]=useState([])
+
+  useEffect(() => {
+    let Q=[],A=[],M=[]
+    axios.post('/view_group_by_course_id_and_group_number',
+    {course_id: location.state.course.course_id, group_number:location.state.course.group_number},
+    {headers:{authorization:localStorage.getItem("Authorization")}}).then((res)=>{
+      
+      res.respone.quizzes.map((sets)=>{
+        var result = sets.find(obj => {
+          return obj.student_id === JSON.parse(localStorage.getItem("data")).student_id
+        })
+        Q.push(result)
+      })
+    })
+    console.log(Q)
+
+}, [])
+
     const [open, setOpen] = useState('1');
     const toggle = (id) => {
       if (open === id) {

@@ -1,5 +1,5 @@
 import { Link ,useNavigate,useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../component/CreateCourse.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -9,17 +9,26 @@ const UpdateDepartment = (props) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [department,setDepartment]=useState({})
-  try {
-    setDepartment(location.state.department)
-  } catch (error) {
-    navigate(-1)
-  }
-  
   const [imageUrl, setImageUrl] = useState("");
   const [imageSelected, setImageSelected] = useState(false);
   const [DepartmentId]= useState(department.department_id);
   const [DepartmentName,setDepartmentName]= useState(department.department_name);
   const [DepartmentDesc,setDepartmentDesc]= useState(department.department_description);
+
+  
+  useEffect(() => {
+    try {
+      setDepartment(location.state.department)
+      setDepartmentName(location.state.department.department_name)
+      setDepartmentDesc(location.state.department.department_description)
+    } catch (error) {
+      navigate(-1)
+    }
+   
+
+  }, [])
+  
+  
 
 
   function handleImageChange(e) {
@@ -59,7 +68,7 @@ const UpdateDepartment = (props) => {
         <div className="container">
           <form>
             <h2 className="h2">Update :{department.department_id}</h2>
-            <div class="row g-2 align-items-center mb-3">
+            <div className="row g-2 align-items-center mb-3">
               <div className="col-auto">
                 <div style={{ position: "relative", display: "inline-block" }}>
                   {!imageSelected && (
@@ -102,7 +111,7 @@ const UpdateDepartment = (props) => {
             </div>
 
 
-            <div class="row g-2 align-items-center mb-3">
+            <div className="row g-2 align-items-center mb-3">
               <div className="col-auto">
                 <h5>
                   {" "}
@@ -116,7 +125,6 @@ const UpdateDepartment = (props) => {
                   type="text"
                   className="form-control"
                   id="departmentName"
-                  placeholder="Enter here"
 
                   value={DepartmentName}
                   onChange={(e)=>{
@@ -138,7 +146,6 @@ const UpdateDepartment = (props) => {
                   type="text"
                   className="form-control"
                   id="corsedepartment"
-                  placeholder="Enter here"
 
                   value={DepartmentDesc}
                   onChange={(e)=>{

@@ -1,11 +1,12 @@
-import React, { Link,useEffect} from 'react';
+import React, { useEffect} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../component/Grades.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from 'react-router-dom';
 
 
 const MyCourseList  = () => {
-
+    const navigation=useNavigate()
     const [getCourses, setCourses] = React.useState([])
 
     useEffect(() => {
@@ -21,9 +22,12 @@ const MyCourseList  = () => {
                 <th scope="row"> <img className="Add" src={Course.image} alt="" /></th>
                 <th >{Course.course_id}</th>
                 <td>{Course.group_number}</td>
-                <td>
-                        <img className="imgedit" src="../images/eye1.png" alt="" />
-
+                <td onClick={()=>{ 
+                    navigation('/GradesDetails',{state:{course:Course}})
+                  }}>
+                    
+                        <img className="imgview" src="../images/eye1.png" alt="" />
+                        
                 </td>
             </tr>))}
         </tbody>

@@ -9,14 +9,6 @@ const Update = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [student,setStudent]=useState({})
-  useEffect(() => {
-    try {
-      setStudent(location.state.student)
-    } catch (error) {
-      navigate(-1)
-    }
-  }, [])
-  
   const [formData, setFormData] = useState({
     email:student.email,
     phone: student.phone,
@@ -27,6 +19,15 @@ const Update = () => {
     phone,
     mobile,
     address}=formData;
+  useEffect(() => {
+    try {
+      setStudent(location.state.student)
+    } catch (error) {
+      navigate(-1)
+    }
+  }, [])
+  
+  
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
