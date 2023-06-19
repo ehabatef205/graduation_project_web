@@ -12,7 +12,6 @@ const AddDegrees = () => {
   useEffect(()=>{
    try {
     setGroup(location.state.Group)
-    console.log(location.state.Group)
   } catch (error) {
     navigate(-1)
   }

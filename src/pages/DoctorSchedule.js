@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+
 import "../component/DoctorSchedule.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Bars from "./statics/Bars";
 const DoctorSchedule = () => {
   const handlePrint = () => {
     window.print();
@@ -8,46 +9,7 @@ const DoctorSchedule = () => {
 
   return (
     <div className="divrootSchD">
-      <div id="root">
-        <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
-          <div className="container-fluid">
-            <div className="divlogo fs-5">
-              <h className="h" style={{ color: "black" }}>
-                Faculty Of Science
-              </h>
-            </div>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="true"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item" style={{ marginLeft: "15px" }}>
-                  <Link
-                    className="navbar-brand badge rounded-pill btn  fs-5  "
-                    aria-current="page"
-                    to="/"
-                  >
-                    <h className="h" style={{ color: "black" }}>
-                      Home
-                    </h>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+     <Bars/>
 
       <div className="containerSchD">
         <table className="table table-bordered">

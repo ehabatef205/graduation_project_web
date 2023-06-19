@@ -2,14 +2,14 @@ import { useLocation } from "react-router-dom";
 
 import "../component/UpdateCourses.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AdminBar from "./statics/AdminBar";
+import Bars from "./statics/Bars";
 const UpdateCourses = () => {
   const location = useLocation()
   const { course } = location.state
   
   return (
     <div className="divrootupc">
-      <AdminBar></AdminBar>
+      <Bars/>
       <div className="child1">
         <div className="container">
           <form>

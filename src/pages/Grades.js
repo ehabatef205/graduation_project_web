@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
+
 import "../component/Grades.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MyCourseList from "../lists/mycourselist";
-import StudentBar from "./statics/StudentBar";
+
+import Bars from "./statics/Bars";
 const Grades = () => {
   return (
     <div className="divrootG">
       <div id="root">
-      <StudentBar/>
+      <Bars/>
         <div className="containerG">
           <h1>Grades</h1>
           <table class="table table-striped">
