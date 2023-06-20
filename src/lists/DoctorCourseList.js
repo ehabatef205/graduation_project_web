@@ -35,7 +35,7 @@ return(
               <td>
                   <img className="imgview" src="../images/marking.png" alt="grades"
                   onClick={()=>{ 
-                    navigation('/Adddegrees',{state:{Group:Group}})
+                    navigation('/Adddegrees',{state:{group:Group}})
                   }} />
                 
               </td>

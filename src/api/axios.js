@@ -1,5 +1,5 @@
 import axios from 'axios';
 ///  define 
-axios.defaults.baseURL = 'https://confused-bat-stole.cyclic.app/api/'
-axios.defaults.headers.common = {'authorization': localStorage.getItem('Authorization')}
+axios.defaults.baseURL = 'http://localhost:5000/api/'
+
 export default axios;

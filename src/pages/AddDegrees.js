@@ -11,11 +11,15 @@ const AddDegrees = () => {
   const [Group,setGroup]=useState({})
   useEffect(()=>{
    try {
-    setGroup(location.state.Group)
+    setGroup(location.state.group)
+    console.log(location.state.group)
   } catch (error) {
     navigate(-1)
   }
 },[])
+const add=()=>{
+
+}
   return (
     <div className="divrootADE">
       <Bars/>
@@ -26,10 +30,10 @@ const AddDegrees = () => {
             className="inputA"
             id="Type"
           >
-          <option value=""></option>
-          <option>Quizes </option>
-          <option>Midterms </option>
-          <option>Assignment </option>
+          <option value="" name></option>
+          <option value="">Quizes </option>
+          <option value="">Midterms </option>
+          <option  value="">Assignment </option>
           </select>
         
           <label htmlFor="degree">Enter Name:</label>
@@ -37,7 +41,7 @@ const AddDegrees = () => {
             className="inputA"
             id="studentId"
           />
-          <table className="table table-striped">
+          <table  className="table table-striped">
           <thead>
             <tr>
               <th scope="col">Student code</th>
@@ -45,31 +49,18 @@ const AddDegrees = () => {
               <th scope="col">Degree</th>
             </tr>
           </thead>
-          <tbody>
-          {Group.students.map((student_id,key)=>(<tr>
+          <tbody >
+           
+            {Group.students?.map((student,key)=>(<tr>
             <th scope="row">
-              Rahma Sabry
+              {student}
             </th>
-            <th>1927204</th>
-            <td><input className="inputAD"></input></td>
+            <td><input className="inputAD" name={student}></input></td>
           </tr>))}
-          <tr>
-            <th scope="row">
-              Ziad Mohamed
-            </th>
-            <th>1927109</th>
-            <td><input className="inputAD"></input></td>
-          </tr>
-          <tr>
-            <th scope="row">
-              Ehab Atef
-            </th>
-            <th>1827066</th>
-            <td><input className="inputAD"></input></td>
-          </tr>
+          
           </tbody>
         </table>
-          <button type="submit">Submit</button>
+          <button type="submit" onClick={add}>Submit</button>
         </form>
         
          
